@@ -73,15 +73,15 @@ function findPath(x,y)
 end
 
 function wrench(x, y)
-    bot:wrench(bot.x, bot.y)
+    bot:wrench(bot.x + x, bot.y + y)
 end
 
 function punch(x, y)
-    bot:hit(bot.x, bot.y)
+    bot:hit(bot.x + x, bot.y + y)
 end
 
 function place(id, x, y)
-    bot:place(bot.x, bot.y, id)
+    bot:place(bot.x + x, bot.y + y, id)
 end
 
 function sendPacket(typ, pkt)
