@@ -27,9 +27,9 @@ function OdBot()
 
     return {
         world = bot:getWorld().name,
-        name = getLocal().name,
-        x = math.floor(getLocal().posx / 32),
-        y = math.floor(getLocal().posy / 32),
+        name = bot.name,
+        x = bot.x,
+        y = bot.y,
         level = bot.level,
         status = Status,
         gems = bot.gem_count,
@@ -73,19 +73,15 @@ function findPath(x,y)
 end
 
 function wrench(x, y)
-    bot:wrench(math.floor(getLocal().posx / 32 + x), math.floor(getLocal().posy / 32 + y))
+    bot:wrench(bot.x, bot.y)
 end
 
 function punch(x, y)
-    bot:hit(math.floor(getLocal().posx / 32 + x), math.floor(getLocal().posy / 32 + y))
-end
-
-function punch(x, y)
-    bot:hit(math.floor(getLocal().posx / 32 + x), math.floor(getLocal().posy / 32 + y))
+    bot:hit(bot.x, bot.y)
 end
 
 function place(id, x, y)
-    bot:place(math.floor(getLocal().posx / 32 + x), math.floor(getLocal().posy / 32 + y), id)
+    bot:place(bot.x, bot.y, id)
 end
 
 function sendPacket(typ, pkt)
