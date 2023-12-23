@@ -126,10 +126,12 @@ function getTile(x, y)
     tilebg = 0
     tileflags = 0
     tileready = false
-    tilefg = world:getTile(x, y).fg
-    tilebg = world:getTile(x, y).bg
-    tileflags = world:getTile(x, y).flags
-    tileready = world:getTile(x, y):canHarvest()
+    if bot:isInWorld() then
+        tilefg = world:getTile(x, y).fg
+        tilebg = world:getTile(x, y).bg
+        tileflags = world:getTile(x, y).flags
+        tileready = world:getTile(x, y):canHarvest()
+    end
     return {
         fg = tilefg,
         bg = tilebg,
@@ -150,7 +152,9 @@ function getTiles()
     world = bot:getWorld()
     local tiles = {}
     for _,tile in pairs(world:getTiles()) do
-        table.insert(tiles, { x = tile.x, y = tile.y, fg = tile.fg, bg = tile.bg, ready = tile:canHarvest(), flags = tile.flags})
+        if bot:isInWorld() then
+            table.insert(tiles, { x = tile.x, y = tile.y, fg = tile.fg, bg = tile.bg, ready = tile:canHarvest(), flags = tile.flags})
+        end
     end
     return tiles
 end
