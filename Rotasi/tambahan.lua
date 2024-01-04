@@ -1,4 +1,6 @@
-RarityLevel = 1
+if not RarityLevel then
+	RarityLevel = 1
+end
 nLoop = 0
 WorldPNB = "ABCHJADHJAD"
 
