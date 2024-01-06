@@ -1,6 +1,6 @@
 Odirrrr = "https://raw.githubusercontent.com/ditampol-tzuyoon/surfer/main/Image%20Animasi.gif"
 LinkStore = "https://discord.gg/UG6MNdqtTa"
-IP_Server_OD = "170.187.197.22"
+IP_Server_OD = "20.51.234.101"
 
 function IniWaktu()
     -- Mendapatkan waktu saat ini dalam detik sejak epoch dalam UTC
