@@ -25,10 +25,24 @@ function OdBot()
         Status = "offline"
     end
 
-    if bot:isInWorld() then
-        erine = getLocal().name
+    if not GuestAkun then
+        erine = bot.name
     else
-    	erine = bot.name
+        if not erine then
+            if bot:isInWorld() then
+                erine = getLocal().name
+            else
+                erine = bot.name
+            end
+        else
+            if not string.match(Names, "_%d+") then
+                if bot:isInWorld() then
+                    erine = getLocal().name
+                else
+                    erine = bot.name
+                end
+            end
+        end
     end
 
     return {
