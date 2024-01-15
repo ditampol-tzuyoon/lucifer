@@ -25,9 +25,15 @@ function OdBot()
         Status = "offline"
     end
 
+    if bot:isInWorld() then
+        erine = getLocal().name
+    else
+    	erine = bot.name
+    end
+
     return {
         world = bot:getWorld().name,
-        name = bot.name,
+        name = erine,
         x = bot.x,
         y = bot.y,
         level = bot.level,
