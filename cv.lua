@@ -35,7 +35,7 @@ function OdBot()
                 erine = bot.name
             end
         else
-            if not string.match(Names, "_%d+") then
+            if not string.match(erine, "_%d+") then
                 if bot:isInWorld() then
                     erine = getLocal().name
                 else
