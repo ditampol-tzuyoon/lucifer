@@ -269,7 +269,7 @@ end
 function PakaiProxy(socks)
     manager = getProxyManager()
     manager:setLimit(LimitProxy)
-    for _, v in pairs(ListGuest) do
+    for _, v in pairs(ListProxy) do
         manager:addProxy(v)
     end
 end
