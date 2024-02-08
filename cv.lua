@@ -58,6 +58,29 @@ function OdBot()
     }
 end
 
+function StatusBot()
+    if bot.status == BotStatus.online then
+        Status = "online"
+    elseif bot.status == BotStatus.wrong_password then
+        Status = "wrong"
+    elseif bot.status == BotStatus.account_banned then
+        Status = "acc banned"
+    elseif bot.status == BotStatus.location_banned then
+        Status = "ip banned"
+    elseif bot.status == BotStatus.version_update then
+        Status = "update version"
+    elseif bot.status == BotStatus.maintenance then
+        Status = "maintenance"
+    elseif bot.status == BotStatus.advanced_account_protection then
+        Status = "AAP"
+    elseif bot.status == BotStatus.guest_limit then
+        Status = "guestError"
+    else
+        Status = "offline"
+    end
+    return Status
+end
+
 function getPlayers()
     world = bot:getWorld()
     local orang = {}
