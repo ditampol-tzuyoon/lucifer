@@ -91,18 +91,6 @@ function findItem(id)
     end
 end
 
-function findItem(id)
-    if id == 112 then
-        return OdBot().gems
-    end
-    item = bot:getItemCount(id)
-    if item == nil then
-        return 0
-    else
-        return item
-    end
-end
-
 function collect(erin)
     bot:collect(erin, 100)
 end
