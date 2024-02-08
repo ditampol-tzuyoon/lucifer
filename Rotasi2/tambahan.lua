@@ -66,7 +66,7 @@ function IniWaktu()
 end
 
 function Tegs(abc)
-    log(AmbilWaktu().." | "..OdBot().name.." | "..abc)
+    print(AmbilWaktu().." | "..OdBot().name.." | "..abc)
 end
 
 function SplitAkun(divira)
