@@ -93,7 +93,7 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(statzBot.." Bot Status", (OdBot().status):upper().. " | "..getPing().."ms", true)
         wh.embed1:addField(emot_tas.." Backpack", OdBot().items.." / "..OdBot().slots.." Slots.", true)
         wh.embed1:addField(emot_gems.." My Gems", OdBot().gems.." Gems", true)
-        wh.embed1:addField(emot_world.." List World", ShowWorld, true)
+        wh.embed1:addField(emot_world.." List World", ShowWorld, false)
         wh:edit(HookID)
 
     elseif TypeHook == "WebhookSeed" and (not HideWebhook or ShowSeedInfo) then
