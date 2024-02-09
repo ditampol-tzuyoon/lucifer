@@ -1,6 +1,5 @@
 nLoop = 0
 WorldPNB = "WORLDPNBSAYAAPA"
-ModUrl = "https://discord.com/api/webhooks/1203676541264072776/UlY0RhSidiRAIgLI0o7uU4gkDXoPkVtURTyxv2pZXX-1G2w4pWKsIY__UPA1FiUZlm4c"
 
 if not DurasiWorldPNB then
     DurasiWorldPNB = 75
