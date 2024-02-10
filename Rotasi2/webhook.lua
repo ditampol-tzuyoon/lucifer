@@ -69,7 +69,6 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1.description = logger
         wh.embed1.color = Warna
         wh.embed1.footer.text = "Rotation Lucifer by Ohdear_\n"..IniWaktu()
-        wh.embed1.image = Odirrrr
         wh:send()
 
     elseif TypeHook == "MainHook" and (not HideWebhook or ShowMainInfo) then
