@@ -68,6 +68,8 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1.use = true
         wh.embed1.description = logger
         wh.embed1.color = Warna
+        wh.embed1:addField(emot_bot.." Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
+        wh.embed1:addField(":timer: Bot Active", BotRun, false)
         wh.embed1.footer.text = "Rotation Lucifer by Ohdear_\n"..IniWaktu()
         wh:send()
 
