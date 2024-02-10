@@ -136,5 +136,25 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(":timer: Bot Active", BotRun, false)
         wh:edit(HookIDPack)
 
+    elseif TypeHook == "WebhookSpec" and (not HideWebhook or ShowSpecInfo) then
+        wh = Webhook.new(WebhookSpec)
+        wh.content = Ment
+        wh.username = bot.name
+        wh.embed1.use = true
+        wh.embed1.description = logger
+        wh.embed1.color = Warna
+        wh.embed1.footer.text = "Rotation Lucifer by Ohdear_\n"..IniWaktu()
+        wh.embed1.image = Odirrrr
+        wh.embed1.footer.icon_url = Thumbs
+        wh.embed1.thumbnail = Lopar
+        wh.embed1.author.name = Judulz
+        wh.embed1.author.url = LinkStore
+        wh.embed1.author.icon_url = Thumbs
+
+        wh.embed1:addField(emot_bot.." Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
+        wh.embed1:addField(emot_pack.." SPECIAL ITEM", ShowSpec, true)
+        wh.embed1:addField(":timer: Bot Active", BotRun, false)
+        wh:edit(HookIDSpec)
+
     end
 end
