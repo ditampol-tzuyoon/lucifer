@@ -177,7 +177,7 @@ function getTile(x, y)
     tilebg = 0
     tileflags = 0
     tileready = false
-    if bot:isInWorld() then
+    if bot:isInWorld() and y >= 0 and y <= 53 then
         tilefg = world:getTile(x, y).fg
         tilebg = world:getTile(x, y).bg
         tileflags = world:getTile(x, y).flags
