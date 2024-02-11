@@ -173,8 +173,8 @@ end
 
 function getTile(x, y)
     world = bot:getWorld()
-    tilefg = 0
-    tilebg = 0
+    tilefg = 9999
+    tilebg = 9999
     tileflags = 0
     tileready = false
     if bot:isInWorld() and y >= 0 and y <= 53 then
