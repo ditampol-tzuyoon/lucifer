@@ -32,7 +32,11 @@ function ohdsay(logger, TypeHook, Pings)
     end
 
     if Pings then
-        Ment = "<@"..userdc..">"
+        if SimplePinghook then
+            Ment = "<@"..userdc.."> | "
+        else
+            Ment = "<@"..userdc..">"
+        end
     else
         Ment = ""
     end
@@ -65,7 +69,7 @@ function ohdsay(logger, TypeHook, Pings)
         wh = Webhook.new(PingHook)
 
         if SimplePinghook then
-            wh.content = Ment.." | "..logger.." | **Lv"..bot.level.."**"
+            wh.content = Ment..logger.." | **Lv"..bot.level.."**"
             wh.username = bot.name
         else
             wh.content = Ment
