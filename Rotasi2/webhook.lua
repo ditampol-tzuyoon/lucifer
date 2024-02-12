@@ -18,6 +18,13 @@ LogoPartai = {
     "https://raw.githubusercontent.com/ditampol-tzuyoon/Growtopia/main/Erine/13.jpg"
 }
 
+function TahanGems(logger)
+    wh = Webhook.new(WebhookCID)
+    wh.content = logger
+    wh.username = "Keep Gems Account"
+    wh:send()
+end
+
 function ohdsay(logger, TypeHook, Pings)
 
     Lopar = LogoPartai[math.random(1, #LogoPartai)]
