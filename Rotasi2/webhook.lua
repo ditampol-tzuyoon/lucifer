@@ -88,7 +88,7 @@ function ohdsay(logger, TypeHook, Pings)
             else
                 ShowPermata = ""
             end
-            wh.content = logger.." | **Lv"..bot.level.."**"..ShowPermata..Ment
+            wh.content = statzBot.." | "..logger.." | **Lv"..bot.level.."**"..ShowPermata..Ment
             wh.username = bot.name
         else
             wh.content = Ment
