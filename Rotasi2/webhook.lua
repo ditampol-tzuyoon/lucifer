@@ -40,7 +40,7 @@ function ohdsay(logger, TypeHook, Pings)
 
     if Pings then
         if SimplePinghook then
-            Ment = "<@"..userdc.."> | "
+            Ment = " | <@"..userdc..">"
         else
             Ment = "<@"..userdc..">"
         end
@@ -81,7 +81,7 @@ function ohdsay(logger, TypeHook, Pings)
             else
                 ShowPermata = ""
             end
-            wh.content = Ment..logger.." | **Lv"..bot.level.."**"..ShowPermata
+            wh.content = logger.." | **Lv"..bot.level.."**"..ShowPermata..Ment
             wh.username = bot.name
         else
             wh.content = Ment
