@@ -76,7 +76,12 @@ function ohdsay(logger, TypeHook, Pings)
         wh = Webhook.new(PingHook)
 
         if SimplePinghook then
-            wh.content = Ment..logger.." | **Lv"..bot.level.."**"
+            if TargetGems then
+                ShowPermata = " | **"..findItem(112).." Gems**"
+            else
+                ShowPermata = ""
+            end
+            wh.content = Ment..logger.." | **Lv"..bot.level.."**"..ShowPermata
             wh.username = bot.name
         else
             wh.content = Ment
