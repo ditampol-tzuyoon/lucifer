@@ -18,6 +18,13 @@ LogoPartai = {
     "https://raw.githubusercontent.com/ditampol-tzuyoon/Growtopia/main/Erine/13.jpg"
 }
 
+function SendPlant(logger)
+    wh = Webhook.new(WebhookPlant)
+    wh.content = logger
+    wh.username = bot.name
+    wh:send()
+end
+
 function TahanGems(logger)
     wh = Webhook.new(WebhookCID)
     wh.content = logger
