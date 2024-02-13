@@ -39,10 +39,10 @@ function ohdsay(logger, TypeHook, Pings)
 
     if bot.status == 1 then
         Warna = 7405312
-        statzBot = ":green_circle:"
+        statzBot = "<a:Onlen:1206807819370758204>"
     else
         Warna = 16711680
-        statzBot = ":red_circle:"
+        statzBot = "<a:Oflen:1206807838996045844>"
     end
 
     if Pings then
