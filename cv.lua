@@ -90,10 +90,6 @@ function getPlayers()
     return orang
 end
 
-function findClothes(id)
-    return bot:getInventory():getItem(id).isActive
-end
-
 function wear(id)
     bot:wear(id)
 end
@@ -112,6 +108,13 @@ function findItem(id)
     else
         return item
     end
+end
+
+function findClothes(id)
+    if findItem(id) > 0 and bot:isInWorld() then
+        return bot:getInventory():getItem(id).isActive
+    end
+    return false
 end
 
 function collect(erin)
