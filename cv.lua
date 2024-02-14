@@ -111,10 +111,7 @@ function findItem(id)
 end
 
 function findClothes(id)
-    if findItem(id) > 0 and bot:isInWorld() then
-        return bot:getInventory():getItem(id).isActive
-    end
-    return false
+    return bot:getInventory():getItem(id).isActive
 end
 
 function collect(erin)
