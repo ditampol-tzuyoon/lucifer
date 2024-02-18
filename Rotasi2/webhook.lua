@@ -78,6 +78,16 @@ function ohdsay(logger, TypeHook, Pings)
     else
         pibo = ":red_circle: **NOT WEAR** (x"..findItem(98)..")"
     end
+
+    TotalAktif = 0
+    TotalNonaktif = 0
+    for _, v in pairs(getBots()) do
+        if v.status == 1 then
+            TotalAktif = TotalAktif + 1
+        else
+            TotalNonaktif = TotalNonaktif + 1
+        end
+    end
     
     if TypeHook == "PingHook" then
         wh = Webhook.new(PingHook)
@@ -100,6 +110,7 @@ function ohdsay(logger, TypeHook, Pings)
 
             wh.embed1:addField(emot_bot.." Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
             wh.embed1:addField(":timer: Bot Active", BotRun, false)
+            wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         end
         wh:send()
 
@@ -122,6 +133,7 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(emot_world.." Current World", bot:getWorld().name, true)
         wh.embed1:addField(emot_pickaxe.." Pickaxe", pibo, true)
         wh.embed1:addField(statzBot.." Bot Status", (OdBot().status):upper().. " | "..getPing().."ms", true)
+        wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh.embed1:addField(emot_tas.." Backpack", OdBot().items.." / "..OdBot().slots.." Slots.", true)
         wh.embed1:addField(emot_gems.." My Gems", OdBot().gems.." Gems", true)
         wh.embed1:addField(emot_world.." List World", ShowWorld, false)
@@ -146,6 +158,7 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(emot_world.." "..GetNameID(seed), ShowSeed, true)
         wh.embed1:addField(emot_tas.." Backpack (Sisa Seed)", findItem(seed).." "..GetNameID(seed), true)
         wh.embed1:addField(":timer: Bot Active", BotRun, false)
+        wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh:edit(HookIDSeed)
 
     elseif TypeHook == "WebhookPack" and (not HideWebhook or ShowPackInfo) then
@@ -164,8 +177,9 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1.author.icon_url = Thumbs
 
         wh.embed1:addField(emot_bot.." Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
-        wh.embed1:addField(emot_pack.." "..namapack:upper(), ShowPack, true)
+        wh.embed1:addField(emot_pack.." "..namapack:upper(), ShowPack, false)
         wh.embed1:addField(":timer: Bot Active", BotRun, false)
+        wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh:edit(HookIDPack)
 
     elseif TypeHook == "WebhookSpec" and (not HideWebhook or ShowSpecInfo) then
@@ -184,8 +198,9 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1.author.icon_url = Thumbs
 
         wh.embed1:addField(emot_bot.." Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
-        wh.embed1:addField(emot_pack.." SPECIAL ITEM", ShowSpec, true)
+        wh.embed1:addField(emot_pack.." SPECIAL ITEM", ShowSpec, false)
         wh.embed1:addField(":timer: Bot Active", BotRun, false)
+        wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh:edit(HookIDSpec)
 
     end
