@@ -25,6 +25,12 @@ function SendPlant(logger)
     wh:send()
 end
 
+function SendGrinding(logger)
+    wh = Webhook.new(WebhookGrinding)
+    wh.content = logger
+    wh:edit(idWebhookGrinding)
+end
+
 function TahanGems(logger)
     wh = Webhook.new(WebhookCID)
     wh.content = logger
