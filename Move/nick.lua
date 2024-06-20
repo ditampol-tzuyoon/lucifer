@@ -18,7 +18,8 @@ Odirrrr = "https://raw.githubusercontent.com/ditampol-tzuyoon/surfer/main/Image%
 LinkStore = "https://discord.gg/UG6MNdqtTa"
 IP_Server_OD = "47.253.194.85"
 ListPembeli = {
-    "422670528483033088"
+    "422670528483033088",
+    "614877382352044073"
 }
 
 function ohdsay(logger, TypeHook, Pings)
