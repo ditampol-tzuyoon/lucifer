@@ -156,9 +156,16 @@ function trash(id, count)
     end
 end
 
+if not CollectInterval then
+    CollectInterval = 200
+end
+if not ObjectCollectDelay then
+    ObjectCollectDelay = 100
+end
+
 function collectSet(erin, jarak)
-    bot.collect_interval = 200
-    bot.object_collect_delay = 100
+    bot.collect_interval = CollectInterval
+    bot.object_collect_delay = ObjectCollectDelay
     bot.collect_range = jarak
     bot.auto_collect = erin
 end
