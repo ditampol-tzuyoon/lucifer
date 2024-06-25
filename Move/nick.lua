@@ -19,7 +19,8 @@ LinkStore = "https://discord.gg/UG6MNdqtTa"
 IP_Server_OD = "47.253.194.85"
 ListPembeli = {
     "422670528483033088",
-    "614877382352044073"
+    "614877382352044073",
+    "646934704582426625"
 }
 
 function ohdsay(logger, TypeHook, Pings)
