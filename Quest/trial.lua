@@ -1,1 +1,1 @@
-Tegs("Trial by Ohdear! ["..calculateRemainingTime.."]")
+Tegs("Trial by Ohdear! ["..calculateRemainingTime().."]")
