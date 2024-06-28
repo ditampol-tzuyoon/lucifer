@@ -1,4 +1,5 @@
 UsernameBuyer = {
   "erine",
-  "slava"
+  "slava",
+  "ryyzu"
 }
