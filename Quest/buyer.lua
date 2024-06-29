@@ -4,5 +4,6 @@ UsernameBuyer = {
   "ryyzu",
   "alditaherjelek",
   "XcoBar666",
-  "raki"
+  "raki",
+  "jaryuuu1"
 }
