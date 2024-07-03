@@ -13,6 +13,8 @@ function OdBot()
         Status = "acc banned"
     elseif bot.status == BotStatus.location_banned then
         Status = "ip banned"
+    elseif bot.status == BotStatus.too_many_login then
+        Status = "too many"
     elseif bot.status == BotStatus.version_update then
         Status = "update version"
     elseif bot.status == BotStatus.maintenance then
