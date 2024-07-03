@@ -8,5 +8,6 @@ UsernameBuyer = {
   "jaryuuu1",
   "babi2005",
   "octadamulti",
-  "arielpelu123"
+  "arielpelu123",
+  "reyvaltanq2"
 }
