@@ -98,6 +98,10 @@ function wear(id)
     bot:wear(id)
 end
 
+function unwear(id)
+    bot:unwear(id)
+end
+
 function getPing()
     return bot:getPing()
 end
