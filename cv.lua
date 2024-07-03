@@ -67,6 +67,8 @@ function StatusBot()
         Status = "wrong"
     elseif bot.status == BotStatus.account_banned then
         Status = "acc banned"
+    elseif bot.status == BotStatus.too_many_login then
+        Status = "too many"
     elseif bot.status == BotStatus.location_banned then
         Status = "ip banned"
     elseif bot.status == BotStatus.version_update then
