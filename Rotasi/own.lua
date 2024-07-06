@@ -5,3 +5,4 @@ delayworld = 5000
 delayplant = 150
 delayht = 150
 TargetGems = 999999999
+setoran = 201
