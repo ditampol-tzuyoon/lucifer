@@ -6,3 +6,4 @@ delayplant = 150
 delayht = 150
 TargetGems = 999999999
 setoran = 100
+autobuypack = true
