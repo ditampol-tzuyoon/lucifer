@@ -12,5 +12,6 @@ UsernameBuyer = {
   "reyvaltanq2",
   "ROBYAN26",
   "meotd201",
-  "barunih4"
+  "barunih4",
+  "luciriky1"
 }
