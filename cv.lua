@@ -4,29 +4,34 @@ function say(od)
     bot:say(od)
 end
 
-function OdBot()
-    if bot.status == BotStatus.online then
-        Status = "online"
-    elseif bot.status == BotStatus.wrong_password then
-        Status = "wrong"
-    elseif bot.status == BotStatus.account_banned then
-        Status = "acc banned"
-    elseif bot.status == BotStatus.location_banned then
-        Status = "ip banned"
-    elseif bot.status == BotStatus.too_many_login then
-        Status = "too many"
-    elseif bot.status == BotStatus.version_update then
-        Status = "update version"
-    elseif bot.status == BotStatus.maintenance then
-        Status = "maintenance"
-    elseif bot.status == BotStatus.advanced_account_protection then
-        Status = "AAP"
-    elseif bot.status == BotStatus.guest_limit then
-        Status = "guestError"
-    else
-        Status = "offline"
+function StatusBot()
+    local OdStatus = {
+        [BotStatus.online] = "online",
+        [BotStatus.wrong_password] = "wrong",
+        [BotStatus.account_banned] = "acc banned",
+        [BotStatus.location_banned] = "ip banned",
+        [BotStatus.too_many_login] = "too many",
+        [BotStatus.version_update] = "update version",
+        [BotStatus.maintenance] = "maintenance",
+        [BotStatus.advanced_account_protection] = "AAP",
+        [BotStatus.http_block] = "HTTP Block",
+        [BotStatus.mod_entered ] = "Mod Entered",
+        [BotStatus.changing_subserver ] = "Subserver",
+        [BotStatus.bad_gateway] = "Bad Gateway",
+        [BotStatus.server_issue] = "Server Issue",
+        [BotStatus.retrieving_token] = "Retrieving Token",
+    }
+
+    local erS = OdStatus[bot.status]
+
+    if not erS then
+        erS = "Offline"
     end
 
+    return erS
+end
+
+function OdBot()
     if not GuestAkun then
         erine = bot.name
     else
@@ -53,36 +58,11 @@ function OdBot()
         x = bot.x,
         y = bot.y,
         level = bot.level,
-        status = Status,
+        status = StatusBot(),
         gems = bot.gem_count,
         items = bot:getInventory().itemcount,
         slots = bot:getInventory().slotcount,
     }
-end
-
-function StatusBot()
-    if bot.status == BotStatus.online then
-        Status = "online"
-    elseif bot.status == BotStatus.wrong_password then
-        Status = "wrong"
-    elseif bot.status == BotStatus.account_banned then
-        Status = "acc banned"
-    elseif bot.status == BotStatus.too_many_login then
-        Status = "too many"
-    elseif bot.status == BotStatus.location_banned then
-        Status = "ip banned"
-    elseif bot.status == BotStatus.version_update then
-        Status = "update version"
-    elseif bot.status == BotStatus.maintenance then
-        Status = "maintenance"
-    elseif bot.status == BotStatus.advanced_account_protection then
-        Status = "AAP"
-    elseif bot.status == BotStatus.guest_limit then
-        Status = "guestError"
-    else
-        Status = "offline"
-    end
-    return Status
 end
 
 function getPlayers()
