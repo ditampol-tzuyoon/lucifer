@@ -4,6 +4,10 @@ function say(od)
     bot:say(od)
 end
 
+function Kegiatan(od)
+    bot.custom_status = od
+end
+
 function StatusBot()
     local OdStatus = {
         [BotStatus.online] = "online",
