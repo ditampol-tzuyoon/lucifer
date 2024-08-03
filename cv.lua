@@ -46,10 +46,10 @@ function StatusGoogle()
         [GoogleStatus.unknown_url] = "Unknown URL"
     }
 
-    local erG = OdGoogle[bot.status]
+    local erG = OdGoogle[bot.google_status]
 
     if not erG then
-        erG = "Offline"
+        erG = "Entah"
     end
 
     return erG
