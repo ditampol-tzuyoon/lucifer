@@ -7,4 +7,5 @@ delayht = 150
 TargetGems = 999999999
 setoran = 75
 autobuypack = true
-JedaHW = 15
+JedaHW = 10
+TilePNB = 3                 -- (1 - 5)
