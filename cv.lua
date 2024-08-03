@@ -31,6 +31,30 @@ function StatusBot()
     return erS
 end
 
+function StatusGoogle()
+    local OdGoogle = {
+        [GoogleStatus.idle] = "Idle",
+        [GoogleStatus.processing] = "Processing",
+        [GoogleStatus.init_error] = "Init Error",
+        [GoogleStatus.invalid_credentials] = "Inv Credentials",
+        [GoogleStatus.account_disabled] = "Acc Disabled",
+        [GoogleStatus.captcha_required] = "Captcha Required",
+        [GoogleStatus.phone_required] = "Phone Required",
+        [GoogleStatus.recovery_required] = "Recovery Required",
+        [GoogleStatus.no_recovery_challenge] = "No Recovery Challenge",
+        [GoogleStatus.couldnt_verify] = "Couldnt Verify",
+        [GoogleStatus.unknown_url] = "Unknown URL"
+    }
+
+    local erG = OdGoogle[bot.status]
+
+    if not erG then
+        erG = "Offline"
+    end
+
+    return erG
+end
+
 function OdBot()
     if not GuestAkun then
         erine = bot.name
