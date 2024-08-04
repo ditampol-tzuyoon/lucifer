@@ -226,7 +226,7 @@ function ohdsay(logger, TypeHook, Pings)
     
         for _, erBot in pairs(getBots()) do
             if erBot.index <= 10 then
-                wh.embed1:addField(emot_bot.." "..erBot.name:upper(), "Status: "..StatusBot(erBot):upper().." [Lv"..erBot.level.."]\nGems: "..erBot.gem_count.."\nLocation: "..erBot:getWorld().name:upper(), true)
+                wh.embed1:addField(emot_bot.." "..erBot.name:upper(), "Status: "..StatusBot(erBot):upper().." [Lv"..erBot.level.."]\nLast Activity: "..erBot.custom_status.."\nLocation: "..erBot:getWorld().name:upper().."\nGems: "..erBot.gem_count, true)
             end
         end
     
