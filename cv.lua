@@ -33,7 +33,7 @@ function StatusBot(detail)
     end
     
     if not erS then
-        erS = "Offline"
+        erS = "offline"
     end
 
     return erS
