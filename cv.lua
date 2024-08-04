@@ -50,7 +50,7 @@ function StatusAllBot()
 
         if status == "online" then
             act = act + 1
-        elseif status == "offline" then
+        elseif status ~= "online" and status ~= "acc banned" then
             nonact = nonact + 1
         elseif status == "acc banned" then
             ban = ban + 1
