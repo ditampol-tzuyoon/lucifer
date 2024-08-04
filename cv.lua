@@ -39,6 +39,26 @@ function StatusBot(detail)
     return erS
 end
 
+function StatusAllBot()
+    local act = 0
+    local nonact = 0
+    local ban = 0
+
+    for _, erBot in pairs(getBots()) do
+        local status = StatusBot(erBot)
+
+        if status == "online" then
+            act = act + 1
+        elseif status == "offline" then
+            nonact = nonact + 1
+        elseif status == "acc banned" or status == "ip banned" then
+            ban = ban + 1
+        end
+    end
+
+    return act, nonact, ban
+end
+
 function StatusGoogle()
     local OdGoogle = {
         [GoogleStatus.idle] = "Idle",
