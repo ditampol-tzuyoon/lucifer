@@ -209,5 +209,31 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh:edit(HookIDSpec)
 
+    elseif TypeHook == "WebhookInfo" and (not HideWebhook or ShowBotInfo) then
+        wh = Webhook.new(WebhookInfo)
+        wh.content = ""
+        wh.username = bot.name
+        wh.embed1.use = true
+        wh.embed1.description = "<t:"..os.time()..":R>"
+        wh.embed1.color = Warna
+        wh.embed1.footer.text = "Rotation Lucifer by Ohdear_\n"..IniWaktu()
+        wh.embed1.image = math.random(111111, 999999)
+        wh.embed1.footer.icon_url = Thumbs
+        wh.embed1.thumbnail = Lopar
+        wh.embed1.author.name = Judulz
+        wh.embed1.author.url = LinkStore
+        wh.embed1.author.icon_url = Thumbs
+    
+        for _, erBot in pairs(getBots()) do
+            if erBot.index <= 10 then
+                wh.embed1:addField(emot_bot.." "..erBot.name:upper(), "Status: "..StatusBot(erBot).." [Lv"..erBot.level.."]\nGems: "..erBot.gem_count.."\nLocation: "..erBot:getWorld().name:upper(), true)
+            end
+        end
+    
+        local activez, inactivez, bannedz = StatusAllBot()
+        wh.embed1:addField(":video_game: Status "..#getBots().." Bots", "<a:Onlen:1206807819370758204> | "..activez.."\n<a:Oflen:1206807838996045844> | "..inactivez.."\n:warning: | "..bannedz, true)
+    
+        wh:edit(HookIDInfo)
+
     end
 end
