@@ -26,10 +26,11 @@ function StatusBot(detail)
         [BotStatus.retrieving_token] = "Retrieving Token",
     }
 
+    local erS
     if detail then
-        local erS = OdStatus[detail.status]
+        erS = OdStatus[detail.status]
     else
-        local erS = OdStatus[bot.status]
+        erS = OdStatus[bot.status]
     end
     
     if not erS then
