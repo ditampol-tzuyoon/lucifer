@@ -8,7 +8,7 @@ function Kegiatan(od)
     bot.custom_status = od
 end
 
-function StatusBot()
+function StatusBot(detail)
     local OdStatus = {
         [BotStatus.online] = "online",
         [BotStatus.wrong_password] = "wrong",
@@ -26,8 +26,12 @@ function StatusBot()
         [BotStatus.retrieving_token] = "Retrieving Token",
     }
 
-    local erS = OdStatus[bot.status]
-
+    if detail then
+        local erS = OdStatus[detail.status]
+    else
+        local erS = OdStatus[bot.status]
+    end
+    
     if not erS then
         erS = "Offline"
     end
