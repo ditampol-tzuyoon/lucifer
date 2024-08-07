@@ -1,1 +1,1 @@
-TegOD("SURGA ITU ERINE!")
+print("SURGA ITU ERINE!")
