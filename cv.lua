@@ -24,6 +24,7 @@ function StatusBot(detail)
         [BotStatus.bad_gateway] = "Bad Gateway",
         [BotStatus.server_issue] = "Server Issue",
         [BotStatus.retrieving_token] = "Retrieving Token",
+        [BotStatus.logon_fail] = "Login Fail",
     }
 
     local erS
