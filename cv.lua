@@ -25,6 +25,7 @@ function StatusBot(detail)
         [BotStatus.server_issue] = "Server Issue",
         [BotStatus.retrieving_token] = "Retrieving Token",
         [BotStatus.logon_fail] = "Login Fail",
+        [BotStatus.error_connecting] = "Ercon",
     }
 
     local erS
@@ -268,7 +269,7 @@ function getObjects()
     world = bot:getWorld()
     local object = {}
     for _,obj in pairs(world:getObjects()) do
-        table.insert(object, { x = obj.x, y = obj.y, id = obj.id, uid = obj.oid, count = obj.count, flags = obj.flags})
+        table.insert(object, { x = obj.x, y = obj.y, id = obj.id, oid = obj.oid, count = obj.count, flags = obj.flags})
     end
     return object
 end
