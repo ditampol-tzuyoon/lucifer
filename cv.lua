@@ -234,8 +234,10 @@ function getTile(x, y)
     tilebg = world:getTile(x, y).bg
     tileflags = world:getTile(x, y).flags
     if bot:isInWorld() and y >= 0 and y <= 53 then
-        tileready = world:getTile(x, y):canHarvest()
-        tileacc = world:hasAccess(x, y)
+        if x >= 0 and x <= 99 then
+            tileready = world:getTile(x, y):canHarvest()
+            tileacc = world:hasAccess(x, y)
+        end
     end
     return {
         fg = tilefg,
