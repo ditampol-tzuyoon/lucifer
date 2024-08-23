@@ -19,8 +19,11 @@ function StatusBot(detail)
         [BotStatus.maintenance] = "maintenance",
         [BotStatus.advanced_account_protection] = "AAP",
         [BotStatus.http_block] = "HTTP Block",
-        [BotStatus.mod_entered] = "Mod Entered",
-        [BotStatus.changing_subserver] = "Subserver",
+        [BotStatus.mod_entered ] = "Mod Entered",
+        [BotStatus.changing_subserver ] = "Subserver",
+        [BotStatus.bad_gateway] = "Bad Gateway",
+        [BotStatus.server_issue] = "Server Issue",
+        [BotStatus.retrieving_token] = "Retrieving Token",
         [BotStatus.logon_fail] = "Login Fail",
     }
 
@@ -34,7 +37,6 @@ function StatusBot(detail)
     if not erS then
         erS = "offline"
     end
-
     return erS
 end
 
@@ -70,7 +72,6 @@ function StatusGoogle()
         [GoogleStatus.captcha_required] = "Captcha Required",
         [GoogleStatus.phone_required] = "Phone Required",
         [GoogleStatus.recovery_required] = "Recovery Required",
-        [GoogleStatus.no_recovery_challenge] = "No Recovery Challenge",
         [GoogleStatus.couldnt_verify] = "Couldnt Verify",
         [GoogleStatus.unknown_url] = "Unknown URL"
     }
