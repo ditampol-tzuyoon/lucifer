@@ -21,7 +21,6 @@ function StatusBot(detail)
         [BotStatus.http_block] = "HTTP Block",
         [BotStatus.mod_entered] = "Mod Entered",
         [BotStatus.changing_subserver] = "Subserver",
-        [BotStatus.retrieving_token] = "Retrieving Token",
         [BotStatus.logon_fail] = "Login Fail",
     }
 
