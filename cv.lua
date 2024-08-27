@@ -273,6 +273,16 @@ function getObjects()
     return object
 end
 
+function getClothes()
+    local items = {}
+    for _, item in pairs(getBot():getInventory():getItems()) do
+        if getInfo(item.id).clothing_type > 0 then
+            table.insert(items, { id = item.id, name = getInfo(item.id).name, type = getInfo(item.id).clothing_type})
+        end
+    end
+    return items
+end
+
 function GetNameID(id)
     return getInfo(id).name
 end
