@@ -1,5 +1,4 @@
 DelayRecon = 30000 --JEDA RECONNECT (Ms)
-MinItemPack = 5
 delaypnb = 175
 delayworld = 5000
 delayplant = 150
