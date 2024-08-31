@@ -1,6 +1,7 @@
 Odirrrr = "https://raw.githubusercontent.com/ditampol-tzuyoon/surfer/main/Image%20Animasi.gif"
 LinkStore = "https://discord.gg/UG6MNdqtTa"
 IP_Server_OD = "47.253.194.85"
+ExeTime = os.time()
 
 LogoPartai = {
     "https://raw.githubusercontent.com/ditampol-tzuyoon/Growtopia/main/Erine/1.jpg",
@@ -210,11 +211,14 @@ function ohdsay(logger, TypeHook, Pings)
         wh:edit(HookIDSpec)
     
     elseif TypeHook == "WebhookInfo" and (not HideWebhook or ShowBotInfo) then
+
+        Deskripsi = "Script Dimulai Pada: <t:"..ExeTime..":R>\nTerakhir diUpdate: <t:"..os.time()..":R>"
+        
         wh = Webhook.new(WebhookInfo)
         wh.content = ""
         wh.username = bot.name
         wh.embed1.use = true
-        wh.embed1.description = "<t:"..os.time()..":R>"
+        wh.embed1.description = Deskripsi
         wh.embed1.color = math.random(1000000, 9000000)
         wh.embed1.footer.text = "Rotation Lucifer by Ohdear_\n"..IniWaktu()
         wh.embed1.image = Odirrrr
