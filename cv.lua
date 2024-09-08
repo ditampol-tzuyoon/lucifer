@@ -45,10 +45,12 @@ function StatusAllBot()
     local nonact = 0
     local ban = 0
     local permata = 0
+    local obt_permata = 0
 
     for _, erBot in pairs(getBots()) do
         local status = StatusBot(erBot)
         permata = permata + erBot.gem_count
+        obt_permata = obt_permata + erBot.obtained_gem_count
 
         if status == "online" then
             act = act + 1
@@ -59,7 +61,7 @@ function StatusAllBot()
         end
     end
 
-    return act, nonact, ban, permata
+    return act, nonact, ban, permata, obt_permata
 end
 
 function StatusGoogle()
