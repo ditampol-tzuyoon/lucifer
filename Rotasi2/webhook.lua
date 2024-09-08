@@ -237,8 +237,8 @@ function ohdsay(logger, TypeHook, Pings)
             end
         end
     
-        local activez, inactivez, bannedz, gemsz = StatusAllBot()
-        wh.embed1:addField(":video_game: Status "..#getBots().." Bots", "<a:Onlen:1206807819370758204> | "..activez.."\n<a:Oflen:1206807838996045844> | "..inactivez.."\n:warning: | "..bannedz.."\n:gem: | "..gemsz, false)
+        local activez, inactivez, bannedz, gemsz, obt_gemsz = StatusAllBot()
+        wh.embed1:addField(":video_game: Status "..#getBots().." Bots", "<a:Onlen:1206807819370758204> | "..activez.."\n<a:Oflen:1206807838996045844> | "..inactivez.."\n:warning: | "..bannedz.."\n:gem: | "..gemsz.." / "..obt_gemsz, false)
     
         wh:edit(HookIDInfo)
 
