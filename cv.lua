@@ -290,6 +290,11 @@ function GetNameID(id)
 end
 
 function warp(Dunia, Kunci)
+    CurrentWorld = OdBot().world:upper()
+    if CurrentWorld ~= Dunia:upper() and CurrentWorld ~= "EXIT" then
+        bot:leaveWorld()
+        sleep(2000)
+    end
     if Kunci then
         bot:warp(Dunia.."|"..Kunci)
     else
