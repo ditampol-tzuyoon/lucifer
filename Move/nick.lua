@@ -42,43 +42,44 @@ ListPembeli = {
 }
 
 function ohdsay(logger, TypeHook, Pings)
-
-    Lopar = LogoPartai[math.random(1, #LogoPartai)]
-    Judulz = "Dropped Multi Item Lucifer || "..#ListPembeli.." Users. || Author Ohdear_"
-
-    if bot.status == 1 then
-        Warna = 7405312
-        statzBot = "<a:Onlen:1206807819370758204>"
-    else
-        Warna = 16711680
-        statzBot = "<a:Oflen:1206807838996045844>"
-    end
-
-    if Pings then
-        Ment = " | <@"..userdc..">"
-    else
-        Ment = ""
-    end
+    if not HideWebhook then
+        Lopar = LogoPartai[math.random(1, #LogoPartai)]
+        Judulz = "Dropped Multi Item Lucifer || "..#ListPembeli.." Users. || Author Ohdear_"
     
-    if TypeHook == "PingHook" then
-        wh = Webhook.new(PingHook)
-        wh.content = statzBot.." | "..logger..Ment
-        wh.username = bot.name
-        wh:send()
-    elseif TypeHook == "MainHook" then
-        wh = Webhook.new(MainWebhook)
-        wh.content = Ment
-        wh.username = bot.name
-        wh.embed1.use = true
-        wh.embed1.description = logger
-        wh.embed1.color = Warna
-        wh.embed1.footer.text = "Dropped Items by Ohdear_\n"..IniWaktu()
-        wh.embed1.image = Odirrrr
-        wh.embed1.thumbnail = Lopar
-        wh.embed1.author.name = Judulz
-        wh.embed1.author.url = LinkStore
-        wh.embed1:addField(":crown: Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
-        wh.embed1:addField(":package: List Dropped", ShowItem, false)
-        wh:edit(MainIDMessage)
+        if bot.status == 1 then
+            Warna = 7405312
+            statzBot = "<a:Onlen:1206807819370758204>"
+        else
+            Warna = 16711680
+            statzBot = "<a:Oflen:1206807838996045844>"
+        end
+    
+        if Pings then
+            Ment = " | <@"..userdc..">"
+        else
+            Ment = ""
+        end
+        
+        if TypeHook == "PingHook" then
+            wh = Webhook.new(PingHook)
+            wh.content = statzBot.." | "..logger..Ment
+            wh.username = bot.name
+            wh:send()
+        elseif TypeHook == "MainHook" then
+            wh = Webhook.new(MainWebhook)
+            wh.content = Ment
+            wh.username = bot.name
+            wh.embed1.use = true
+            wh.embed1.description = logger
+            wh.embed1.color = Warna
+            wh.embed1.footer.text = "Dropped Items by Ohdear_\n"..IniWaktu()
+            wh.embed1.image = Odirrrr
+            wh.embed1.thumbnail = Lopar
+            wh.embed1.author.name = Judulz
+            wh.embed1.author.url = LinkStore
+            wh.embed1:addField(":crown: Bot Name", bot.name.." | **Lv"..bot.level.."** | "..getPing().."ms", false)
+            wh.embed1:addField(":package: List Dropped", ShowItem, false)
+            wh:edit(MainIDMessage)
+        end
     end
 end
