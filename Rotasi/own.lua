@@ -8,3 +8,4 @@ setoran = 75
 autobuypack = true
 JedaHW = 10
 TilePNB = 3                 -- (1 - 5)
+idVial = 8548
