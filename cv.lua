@@ -223,29 +223,28 @@ function connect()
 end
 
 function getTile(x, y)
-    world = bot:getWorld()
-    tilefg = 9999
-    tilebg = 9999
-    tileflags = 0
-    tileacc = 0
-    tileready = false
-    tilefg = world:getTile(x, y).fg
-    tilebg = world:getTile(x, y).bg
-    tileflags = world:getTile(x, y).flags
-    if bot:isInWorld() and y >= 0 and y <= 53 then
-        if x >= 0 and x <= 99 then
-            tileready = world:getTile(x, y):canHarvest()
-            tileacc = world:hasAccess(x, y)
-        end
+    if not bot:isInWorld() or x < 0 or x > 99 or y < 0 or y > 53 then
+        return {
+            fg = 9999,
+            bg = 9999,
+            flags = 0,
+            ready = false,
+            access = 0,
+        }
     end
+
+    local world = bot:getWorld()
+    local tile = world:getTile(x, y)
+
     return {
-        fg = tilefg,
-        bg = tilebg,
-        flags = tileflags,
-        ready = tileready,
-        access = tileacc,
+        fg = tile.fg,
+        bg = tile.bg,
+        flags = tile.flags,
+        ready = tile:canHarvest(),
+        access = world:hasAccess(x, y),
     }
 end
+
 
 function getInventory()
     local tas = {}
