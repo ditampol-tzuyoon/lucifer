@@ -11,7 +11,7 @@ TilePNB = 3                 -- (1 - 5)
 idVial = 8548
 nextrandom = true
 
-minSpec = 100
+minSpec = 30
 namapack = "mooncake_mag"         -- Pack Name
 hargapack = 5000
 MinGems = hargapack
