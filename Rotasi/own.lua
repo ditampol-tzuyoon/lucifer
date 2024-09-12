@@ -10,3 +10,4 @@ JedaHW = 10
 TilePNB = 3                 -- (1 - 5)
 idVial = 8548
 nextrandom = true
+minSpec = 100
