@@ -16,3 +16,4 @@ namapack = "mooncake_mag"         -- Pack Name
 hargapack = 5000
 MinGems = hargapack
 SpecialItem = {1094, 1058, 1096, 1098, 10228, 1828, 10138}
+MinItemPack = 30
