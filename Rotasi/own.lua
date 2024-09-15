@@ -11,3 +11,5 @@ TilePNB = 3                 -- (1 - 5)
 idVial = 8548
 nextrandom = true
 TakeMagni = true
+specrandom = true
+minSpec = 100
