@@ -13,3 +13,4 @@ nextrandom = true
 TakeMagni = true
 specrandom = true
 minSpec = 100
+SpecialItem = {1094, 1058, 1096, 1098, 10228, 1828, 10138, 10134, 10136}  
