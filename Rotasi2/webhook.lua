@@ -209,6 +209,12 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(":timer: Bot Active", BotRun, false)
         wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif.." | "..TotalNonaktif, true)
         wh:edit(HookIDSpec)
+
+    elseif TypeHook == "NukedHook" and (not HideWebhook or ShowNukedInfo) then
+        wh = Webhook.new(NukedHook)
+        wh.content = logger.." | "..Ment
+        wh.username = "NUKED INFO"
+        wh:send()
     
     elseif TypeHook == "WebhookInfo" and (not HideWebhook or ShowBotInfo) then
 
