@@ -309,4 +309,4 @@ function Upgrades()
     sendPacket(2, "action|buy\nitem|upgrade_backpack")
 end
 
-Server_Ohdear = "http://8.209.211.43"
+Server_Ohdear = "http://47.90.164.165"
