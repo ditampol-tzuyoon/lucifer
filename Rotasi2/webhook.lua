@@ -212,7 +212,7 @@ function ohdsay(logger, TypeHook, Pings)
 
     elseif TypeHook == "NukedHook" and (not HideWebhook or ShowNukedInfo) then
         wh = Webhook.new(NukedHook)
-        wh.content = logger.." | "..Ment
+        wh.content = logger..Ment
         wh.username = "NUKED INFO"
         wh:send()
     
