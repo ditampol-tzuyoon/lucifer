@@ -10,4 +10,3 @@ JedaHW = 10
 TilePNB = 5                 -- (1 - 5)
 idVial = 8542
 nextrandom = true
-DurasiWorldPNB = 90
