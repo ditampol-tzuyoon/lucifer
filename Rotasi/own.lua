@@ -1,4 +1,3 @@
-DelayRecon = 60000 --JEDA RECONNECT (Ms)
 delaypnb = 175
 delayworld = 5000
 delayplant = 150
