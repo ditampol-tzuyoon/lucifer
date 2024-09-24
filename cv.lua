@@ -87,6 +87,31 @@ function StatusGoogle()
     return erG
 end
 
+function GetMaladyName()
+    local maladies = {
+        [0] = "Healthy",
+        [1] = "Torn Punching Muscle",
+        [2] = "Gem Cuts",
+        [3] = "Chicken Feet",
+        [4] = "Grumbleteeth",
+        [5] = "Broken Heart",
+        [6] = "Chaos Infection",
+        [7] = "Moldy Guts",
+        [8] = "Brainworms",
+        [9] = "Lupus",
+        [10] = "Ecto-Bones",
+        [11] = "Fatty Liver"
+    }
+
+    local maladyName = maladies[bot.malady]
+
+    if not maladyName then
+        maladyName = "Healthy"
+    end
+
+    return maladyName
+end
+
 function OdBot()
     if not GuestAkun then
         erine = bot.name
