@@ -10,3 +10,4 @@ TilePNB = 5                 -- (1 - 5)
 idVial = 8542
 nextrandom = true
 delayrandomworld = 10000
+nLettPNB = 6
