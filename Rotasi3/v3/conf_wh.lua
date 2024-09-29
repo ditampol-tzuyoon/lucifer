@@ -120,8 +120,9 @@ function ohdsay(logger, TypeHook, Pings)
         local Deskripsi = "Script Dimulai Pada: <t:" .. ExeTime .. ":R>\nTerakhir diUpdate: <t:" .. os.time() .. ":R>"
         wh.embed1.description = Deskripsi
 
+        Limit_BotInfo = Limit_BotInfo or 10
         for _, erBot in pairs(getBots()) do
-            if erBot.index <= 10 then
+            if erBot.index <= Limit_BotInfo then
                 wh.embed1:addField(emot_bot .. " " .. erBot.name:upper() .. " [" .. erBot:getInventory():findItem(242) .. " WL]", "Status: " .. StatusBot(erBot):upper() .. " [Lv" .. erBot.level .. "]\nLast Activity: " .. erBot.custom_status .. "\nLocation: " .. erBot:getWorld().name:upper() .. "\nGems: " .. erBot.gem_count, true)
                 if (erBot.index % 2) == 0 then
                     wh.embed1:addField("\t", "\t", false)
