@@ -40,31 +40,7 @@ function StatusBot(detail)
     return erS
 end
 
-function StatusAllBot()
-    local act = 0
-    local nonact = 0
-    local ban = 0
-    local permata = 0
-    local obt_permata = 0
-
-    for _, erBot in pairs(getBots()) do
-        local status = StatusBot(erBot)
-        permata = permata + erBot.gem_count
-        obt_permata = obt_permata + erBot.obtained_gem_count
-
-        if status == "online" then
-            act = act + 1
-        elseif status ~= "online" and status ~= "acc banned" then
-            nonact = nonact + 1
-        elseif status == "acc banned" then
-            ban = ban + 1
-        end
-    end
-
-    return act, nonact, ban, permata, obt_permata
-end
-
-function StatusGoogle()
+function StatusGoogle(detail)
     local OdGoogle = {
         [GoogleStatus.idle] = "Idle",
         [GoogleStatus.processing] = "Processing",
@@ -78,13 +54,50 @@ function StatusGoogle()
         [GoogleStatus.unknown_url] = "Unknown URL"
     }
 
-    local erG = OdGoogle[bot.google_status]
-
+    local erG
+    if detail then
+        erG = OdGoogle[detail.google_status]
+    else
+        erG = OdGoogle[bot.google_status]
+    end
+    
     if not erG then
-        erG = "Entah"
+        erG = "Idle"
+    end
+    return erG
+end
+
+function StatusAllBot()
+    local act = 0
+    local nonact = 0
+    local ban = 0
+    local chapc = 0
+    local iner = 0
+    local permata = 0
+    local obt_permata = 0
+
+    for _, erBot in pairs(getBots()) do
+        local statusb = StatusBot(erBot)
+        local statusg = StatusGoogle(erBot)
+        permata = permata + erBot.gem_count
+        obt_permata = obt_permata + erBot.obtained_gem_count
+
+        if statusb == "online" then
+            act = act + 1
+        elseif statusb ~= "online" and statusb ~= "acc banned" then
+            nonact = nonact + 1
+        elseif statusb == "acc banned" then
+            ban = ban + 1
+        end
+
+        if statusg == "Captcha Required" or statusg == "Couldnt Verify" then
+            chapc = chapc + 1
+        elseif statusg == "Init Error" then
+            iner = iner + 1
+        end
     end
 
-    return erG
+    return act, nonact, ban, permata, obt_permata, chapc, iner
 end
 
 function GetMaladyName()
