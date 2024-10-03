@@ -11,3 +11,4 @@ idVial = 8542
 nextrandom = true
 delayrandomworld = 10000
 nLettPNB = 6
+Limit_BotInfo = 2
