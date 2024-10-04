@@ -117,13 +117,18 @@ function ohdsay(logger, TypeHook, Pings)
     
     elseif TypeHook == "WebhookInfo" and (not HideWebhook or ShowBotInfo) then
         local wh = prepareWebhook(WebhookInfo)
-        local Deskripsi = "Script Dimulai Pada: <t:" .. ExeTime .. ":R>\nTerakhir diUpdate: <t:" .. os.time() .. ":R>"
+        local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
         wh.embed1.description = Deskripsi
 
         Limit_BotInfo = Limit_BotInfo or 10
         for _, erBot in pairs(getBots()) do
             if erBot.index <= Limit_BotInfo then
-                wh.embed1:addField(emot_bot .. " " .. erBot.name:upper() .. " [" .. erBot:getInventory():findItem(242) .. " WL]", "Status: " .. StatusBot(erBot):upper() .. " [Lv" .. erBot.level .. "]\nLast Activity: " .. erBot.custom_status .. "\nLocation: " .. erBot:getWorld().name:upper() .. "\nGems: " .. erBot.gem_count, true)
+                if StatusBot(erBot):upper() == "ONLINE" then
+                    EmojiStsBot = "<a:Onlen:1206807819370758204>"
+                else
+                    EmojiStsBot = "<a:Oflen:1206807838996045844>"
+                end
+                wh.embed1:addField(emot_bot .. " " .. erBot.name:upper() .. " [" .. erBot:getInventory():findItem(242) .. " WL]", EmojiStsBot .. " | " .. StatusBot(erBot):upper() .. " [Lv" .. erBot.level .. "]\n<:bubble:1291603413410250835> | " .. erBot.custom_status .. "\n<a:world:1291603790226522143> | ||" .. erBot:getWorld().name:upper() .. "||\n<:gems:1291601156686090240> | " .. formatUang(erBot.gem_count), true)
                 if (erBot.index % 2) == 0 then
                     wh.embed1:addField("\t", "\t", false)
                 end
@@ -131,7 +136,7 @@ function ohdsay(logger, TypeHook, Pings)
         end
 
         local activez, inactivez, bannedz, gemsz, obt_gemsz, chapcz, inerz = StatusAllBot()
-        wh.embed1:addField(":video_game: Status " .. #getBots() .. " Bots", "<a:Onlen:1206807819370758204> | " .. activez .. "\n<a:Oflen:1206807838996045844> | " .. inactivez .. "\n<a:warning:1270653635641999443> | " .. bannedz .. "\n<a:done:1270654533911187517> | " .. chapcz .. "\n<a:loading:1270966313095008339> | " .. inerz .. "\n:gem: | " .. gemsz .. " / " .. obt_gemsz, false)
+        wh.embed1:addField(":video_game: Status " .. #getBots() .. " Bots", "<a:Onlen:1206807819370758204> | " .. activez .. "\n<a:Oflen:1206807838996045844> | " .. inactivez .. "\n<a:warning:1270653635641999443> | " .. bannedz .. "\n<a:done:1270654533911187517> | " .. chapcz .. "\n<a:loading:1270966313095008339> | " .. inerz .. "\n<:gems:1291601156686090240> | " .. formatUang(gemsz) .. " / " .. formatUang(obt_gemsz), false)
         wh:edit(HookIDInfo)
     end
 end
