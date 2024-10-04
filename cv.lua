@@ -200,6 +200,16 @@ function collect(erin)
     bot:collect(erin, 100)
 end
 
+function formatUang(nilai)
+    local formatted = tostring(nilai)    
+    local result = formatted:reverse():gsub("(%d%d%d)", "%1."):reverse()
+    
+    if result:sub(1, 1) == "." then
+        result = result:sub(2)
+    end
+    
+    return result
+end
 
 function findPath(x,y)
     bot:findPath(x,y)
