@@ -128,7 +128,7 @@ function ohdsay(logger, TypeHook, Pings)
                 else
                     EmojiStsBot = "<a:Oflen:1206807838996045844>"
                 end
-                wh.embed1:addField(emot_bot .. " " .. erBot.name:upper() .. " [" .. erBot:getInventory():findItem(242) .. " WL]", EmojiStsBot .. " | " .. StatusBot(erBot):upper() .. " [Lv" .. erBot.level .. "]\n<:bubble:1291603413410250835> | " .. erBot.custom_status .. "\n<a:world:1291603790226522143> | ||" .. erBot:getWorld().name:upper() .. "||\n<:gems:1291601156686090240> | " .. formatUang(erBot.gem_count), true)
+                wh.embed1:addField(emot_bot .. " " .. erBot.name:upper() .. " [" .. erBot:getInventory():findItem(242) .. " WL]", EmojiStsBot .. " | " .. StatusBot(erBot):upper() .. " [Lv" .. erBot.level .. "]\n<:bubble:1291603413410250835> | " .. erBot.custom_status .. "\n<a:world:1291603790226522143> | ||" .. erBot:getWorld().name:upper() .. "||\n<:gems:1291601156686090240> | " .. formatUang(erBot.gem_count) .. " / " .. formatUang(erBot.obtained_gem_count), true)
                 if (erBot.index % 2) == 0 then
                     wh.embed1:addField("\t", "\t", false)
                 end
