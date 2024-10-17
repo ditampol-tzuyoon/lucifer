@@ -333,7 +333,7 @@ function getClothes()
 end
 
 function GetNameID(id)
-    return getInfo(id).name
+    return getInfo(id).name or id
 end
 
 function warp(Dunia, Kunci)
