@@ -14,4 +14,7 @@ Limit_BotInfo = 12
 PNBinFarm = false
 autobuypack = true
 
+DelayRecon = 90000              -- Interval Reconnecting
+DelayBadServer = 120000
+
 -- if getUsername() == "oline5" then autobuypack = false end
