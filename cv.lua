@@ -333,8 +333,14 @@ function getClothes()
 end
 
 function GetNameID(id)
-    return getInfo(id).name or id
+    local info = getInfo(id)
+    if info and info.name then
+        return info.name
+    else
+        return "Unknown Item - "..id
+    end
 end
+
 
 function warp(Dunia, Kunci)
     CurrentWorld = OdBot().world:upper()
