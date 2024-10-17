@@ -336,11 +336,9 @@ function GetNameID(id)
     local info = getInfo(id)
     if info and info.name then
         return info.name
-    else
-        return "Unknown Item - "..id
     end
+    return "Unknown Item - "..id
 end
-
 
 function warp(Dunia, Kunci)
     CurrentWorld = OdBot().world:upper()
