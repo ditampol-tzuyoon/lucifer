@@ -61,7 +61,7 @@ function ItemName(id)
         [5706] = "<:5706:1296885688154984579>"
     }
     if IconItem[id] then
-        return IconItem[id] .. " [" .. GetNameID(id) .. "]"
+        return IconItem[id]
     end
     return "[" .. GetNameID(id) .. "]"
 end
