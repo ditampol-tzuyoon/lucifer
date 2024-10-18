@@ -18,3 +18,4 @@ DelayRecon = 90000              -- Interval Reconnecting
 DelayBadServer = 120000
 
 -- if getUsername() == "oline5" then autobuypack = false end
+if findItem(112) >= 140000 then PNBinFarm = true end
