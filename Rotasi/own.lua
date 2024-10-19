@@ -14,8 +14,8 @@ Limit_BotInfo = 12
 PNBinFarm = false
 autobuypack = true
 
-DelayRecon = 90000
-DelayBadServer = 120000
+DelayRecon = 75000
+DelayBadServer = 75000
 
 ID_AcuanDrop_Pack = 13
 hargapack = 5000
