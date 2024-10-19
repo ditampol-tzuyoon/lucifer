@@ -66,11 +66,24 @@ function ItemName(id)
     return "[" .. GetNameID(id) .. "]"
 end
 
+item_crime = {2292, 2294, 2296, 2298, 2300, 2308, 2310, 2312, 2314, 2316, 2320, 2322, 2324, 2326, 2328, 2332, 2334, 2336, 2338, 2340}       -- Put all your id item pack in here
+
+function scanCrime()
+    m = 0
+    for _, v in ipairs(item_crime) do
+        m = m + scanFloat(v)
+    end
+    return m
+end
+
 function GetListName(DetilList)
     nama1 = ""
     for i, v in ipairs(DetilList) do
         nama2 = "- "..ItemName(v).." (x"..scanFloat(v)..")\n"
         nama1 = nama1..nama2
+    end
+    if namapack == "crime_wave" then
+        nama1 = nama1 .. "- Total Items: x" .. scanCrime()
     end
     return nama1
 end
