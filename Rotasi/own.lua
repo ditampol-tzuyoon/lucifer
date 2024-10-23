@@ -12,7 +12,7 @@ delayrandomworld = 10000
 nLettPNB = 6
 Limit_BotInfo = 12
 PNBinFarm = false
-autobuypack = true
+autobuypack = false
 
 DelayRecon = 75000
 DelayBadServer = 75000
