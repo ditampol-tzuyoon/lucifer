@@ -13,6 +13,7 @@ nLettPNB = 6
 Limit_BotInfo = 12
 PNBinFarm = false
 autobuypack = true
+MinItemPack = 1
 namapack = "growganoth"
 
 DelayRecon = 75000
