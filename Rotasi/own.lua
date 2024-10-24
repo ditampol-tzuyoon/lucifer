@@ -18,13 +18,14 @@ namapack = "growganoth"
 
 DelayRecon = 75000
 DelayBadServer = 75000
+iditempack = {10322, 10324, 10326, 3102, 1238, 1220, 3116, 1988, 5256, 1198, 10328}
 
--- IgnorePack = {}
--- for _,pack in pairs(iditempack) do
---     if not pengecualian[pack] then
---         pengecualian[pack]=true
---     end
---     if not IgnorePack[pack] then
---         IgnorePack[pack] = true
---     end
--- end
+IgnorePack = {}
+for _,pack in pairs(iditempack) do
+    if not pengecualian[pack] then
+        pengecualian[pack]=true
+    end
+    if not IgnorePack[pack] then
+        IgnorePack[pack] = true
+    end
+end
