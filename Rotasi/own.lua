@@ -12,7 +12,8 @@ delayrandomworld = 10000
 nLettPNB = 6
 Limit_BotInfo = 12
 PNBinFarm = false
-autobuypack = false
+autobuypack = true
+namapack = "growganoth"
 
 DelayRecon = 75000
 DelayBadServer = 75000
