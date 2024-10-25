@@ -19,7 +19,7 @@ MinGOG = 50
 
 DelayRecon = 75000
 DelayBadServer = 75000
-iditempack = {10322, 10324, 10326, 3102, 1238, 1220, 3116, 1988, 5256, 1198, 10328}
+iditempack = {10322, 10324, 10326, 3102, 1238, 1220, 3116, 1988, 5256, 1198, 10328, 13996}
 
 IgnorePack = {}
 for _,pack in pairs(iditempack) do
