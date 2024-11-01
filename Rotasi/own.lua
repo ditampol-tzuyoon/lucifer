@@ -15,7 +15,8 @@ PNBinFarm = false
 autobuypack = true
 MinItemPack = 1
 namapack = "growganoth"
-MinGOG = 50
+MinGOG = 30
+MinGems = 45000
 
 DelayRecon = 75000
 DelayBadServer = 75000
