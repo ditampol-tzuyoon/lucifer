@@ -12,7 +12,7 @@ delayrandomworld = 10000
 nLettPNB = 6
 Limit_BotInfo = 12
 PNBinFarm = false
-
+TargetLevel = 999
 DelayRecon = 75000
 DelayBadServer = 75000
 
