@@ -37,13 +37,17 @@ for _,pack in pairs(iditempack) do
     end
 end
 
-if bot.level < 50 then
-    JadwalOff = {
-        "14.15 - 16.00",
-        "17.30 - 19.30"
-    }
-else
-    JadwalOff = {
-        "14.15 - 16.00"
-    }
-end
+-- if bot.level < 50 then
+--     JadwalOff = {
+--         "14.15 - 16.00",
+--         "17.30 - 19.30"
+--     }
+-- else
+--     JadwalOff = {
+--         "14.15 - 16.00"
+--     }
+-- end
+
+JadwalOff = {
+    "14.15 - 16.00"
+}
