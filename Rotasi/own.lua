@@ -23,7 +23,7 @@ namapack = "thanksgiving_bell_pack"
 MinItemPack = 2
 iditempack = {10292, 7342, 10278}
 maxbuy = 2
-MinGems = hargapack
+MinGems = 40000
 
 EventLabu = false
 MinGOG = 30
