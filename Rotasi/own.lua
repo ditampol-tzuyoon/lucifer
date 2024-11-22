@@ -18,12 +18,12 @@ DelayBadServer = 75000
 KillGhost = false
 
 autobuypack = true
-hargapack = 7500
-namapack = "thanksgiving_bell"
-MinItemPack = 20
+hargapack = 20000
+namapack = "thanksgiving_bell_pack"
+MinItemPack = 2
 iditempack = {10292, 7342, 10278}
-maxbuy = 4
-MinGems = 30000
+maxbuy = 2
+MinGems = 40000
 
 EventLabu = false
 MinGOG = 30
