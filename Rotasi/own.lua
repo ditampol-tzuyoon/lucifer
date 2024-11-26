@@ -20,10 +20,10 @@ KillGhost = false
 autobuypack = true
 hargapack = 20000
 namapack = "thanksgiving_bell_pack"
-MinItemPack = 2
+MinItemPack = 1
 iditempack = {10292, 7342, 10278}
 maxbuy = 2
-MinGems = 40000
+MinGems = 20000
 
 EventLabu = false
 MinGOG = 30
