@@ -116,7 +116,7 @@ function ohdsay(logger, TypeHook, Pings)
         wh.embed1:addField(emot_bot .. " Bot Name", bot.name .. " | **Lv" .. bot.level .. "** | " .. getPing() .. "ms", false)
         wh.embed1:addField(emot_pack .. " TOOLS ITEM", ShowTools, false)
         wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif .. " | " .. TotalNonaktif, true)
-        wh:edit(HookIDSpec)
+        wh:edit(HookIDTools)
 
     elseif TypeHook == "NukedHook" and (not HideWebhook or ShowNukedInfo) then
         local wh = Webhook.new(NukedHook)
