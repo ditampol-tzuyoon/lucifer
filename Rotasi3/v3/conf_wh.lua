@@ -27,7 +27,7 @@ end
 
 function ohdsay(logger, TypeHook, Pings)
     local Lopar = LogoPartai[math.random(1, #LogoPartai)]
-    local Judulz = "Rotasi Farm Lucifer (" .. versi .. ") || " .. #ListPembeli .. " Users. || Author Ohdear_"
+    local Judulz = "Luci Rotation by Ohdear [" .. versi .. "] || "..getUsername()
     
     local Warna = (bot.status == 1) and 7405312 or 16711680
     local statzBot = (bot.status == 1) and "<a:Onlen:1206807819370758204>" or "<a:Oflen:1206807838996045844>"
@@ -83,7 +83,7 @@ function ohdsay(logger, TypeHook, Pings)
 
     elseif TypeHook == "WebhookSeed" and (not HideWebhook or ShowSeedInfo) then
         local wh = prepareWebhook(WebhookSeed)
-        local Deskripsi = "Script Dimulai Pada: <t:" .. ExeTime .. ":R>\nTerakhir diUpdate: <t:" .. os.time() .. ":R>"
+        local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
         wh.embed1.description = Deskripsi
         wh.embed1:addField(emot_bot .. " Bot Name", bot.name .. " | **Lv" .. bot.level .. "** | " .. getPing() .. "ms", false)
         wh.embed1:addField(emot_world .. " " .. GetNameID(seed), ShowSeed, true)
@@ -93,7 +93,7 @@ function ohdsay(logger, TypeHook, Pings)
 
     elseif TypeHook == "WebhookPack" and (not HideWebhook or ShowPackInfo) then
         local wh = prepareWebhook(WebhookPack)
-        local Deskripsi = "Script Dimulai Pada: <t:" .. ExeTime .. ":R>\nTerakhir diUpdate: <t:" .. os.time() .. ":R>"
+        local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
         wh.embed1.description = Deskripsi
         wh.embed1:addField(emot_bot .. " Bot Name", bot.name .. " | **Lv" .. bot.level .. "** | " .. getPing() .. "ms", false)
         wh.embed1:addField(emot_pack .. " " .. namapack:upper(), ShowPack, false)
@@ -102,10 +102,19 @@ function ohdsay(logger, TypeHook, Pings)
 
     elseif TypeHook == "WebhookSpec" and (not HideWebhook or ShowSpecInfo) then
         local wh = prepareWebhook(WebhookSpec)
-        local Deskripsi = "Script Dimulai Pada: <t:" .. ExeTime .. ":R>\nTerakhir diUpdate: <t:" .. os.time() .. ":R>"
+        local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
         wh.embed1.description = Deskripsi
         wh.embed1:addField(emot_bot .. " Bot Name", bot.name .. " | **Lv" .. bot.level .. "** | " .. getPing() .. "ms", false)
         wh.embed1:addField(emot_pack .. " SPECIAL ITEM", ShowSpec, false)
+        wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif .. " | " .. TotalNonaktif, true)
+        wh:edit(HookIDSpec)
+
+    elseif TypeHook == "WebhookTools" and (not HideWebhook or ShowToolsInfo) and WebhookTools then
+        local wh = prepareWebhook(WebhookTools)
+        local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
+        wh.embed1.description = Deskripsi
+        wh.embed1:addField(emot_bot .. " Bot Name", bot.name .. " | **Lv" .. bot.level .. "** | " .. getPing() .. "ms", false)
+        wh.embed1:addField(emot_pack .. " TOOLS ITEM", ShowTools, false)
         wh.embed1:addField("<a:Onlen:1206807819370758204> ON | OFF <a:Oflen:1206807838996045844>", TotalAktif .. " | " .. TotalNonaktif, true)
         wh:edit(HookIDSpec)
 
