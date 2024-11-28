@@ -18,10 +18,10 @@ DelayBadServer = 150000
 KillGhost = false
 
 autobuypack = true
-hargapack = 20000                -- Pack Price
-namapack = "world_lock_10_pack"         -- Pack Name
-MinItemPack = 10                 -- Bot will dropping the pack when he have X MinItemPack or more
-iditempack = {10292, 242, 10278}              -- Put all your id item pack in here
+hargapack = 10000                -- Pack Price
+namapack = "treasure_blast"         -- Pack Name
+MinItemPack = 1                 -- Bot will dropping the pack when he have X MinItemPack or more
+iditempack = {10394, 7588, 10278, 10292}              -- Put all your id item pack in here
 maxbuy = 2                      -- Bot will try to buying X times if have more gems
 MinGems = 20000
 
