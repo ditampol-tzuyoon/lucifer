@@ -17,10 +17,10 @@ DelayRecon = 150000
 DelayBadServer = 150000
 KillGhost = false
 
-autobuypack = true
+autobuypack = false
 hargapack = 2000                -- Pack Price
 namapack = "signal_jammer"       -- Pack Name
-MinItemPack = 50                 -- Bot will dropping the pack when he have X MinItemPack or more
+MinItemPack = 2                 -- Bot will dropping the pack when he have X MinItemPack or more
 iditempack = {10394, 6416, 6520, 6538, 6522, 6528, 6540, 6518, 6530, 6524, 6536, 6534, 6532, 6526, 226}
 maxbuy = 190                       -- Bot will try to buying X times if have more gems
 MinGems = 2000              -- Minimal Gems for Buying Pack
