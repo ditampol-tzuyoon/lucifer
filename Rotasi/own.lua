@@ -17,7 +17,7 @@ DelayRecon = 150000
 DelayBadServer = 150000
 KillGhost = false
 
-autobuypack = true
+autobuypack = false
 hargapack = 15000                -- Pack Price
 namapack = "star_supplies"       -- Pack Name
 MinItemPack = 25                 -- Bot will dropping the pack when he have X MinItemPack or more
