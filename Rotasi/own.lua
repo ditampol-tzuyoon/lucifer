@@ -15,7 +15,7 @@ PNBinFarm = false
 TargetLevel = 999
 DelayRecon = 150000
 DelayBadServer = 150000
-KillGhost = false
+KillGhost = true
 
 autobuypack = false
 hargapack = 8000                -- Pack Price
