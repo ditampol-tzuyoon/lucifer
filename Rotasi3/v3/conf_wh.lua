@@ -25,6 +25,13 @@ function SendPlant(logger)
     wh:send()
 end
 
+function SendFossil(logger)
+    wh = Webhook.new(WebhookFossil)
+    wh.content = logger
+    wh.username = bot.name
+    wh:send()
+end
+
 function ohdsay(logger, TypeHook, Pings)
     local Lopar = LogoPartai[math.random(1, #LogoPartai)]
     local Judulz = "Luci Rotation by Ohdear [" .. versi .. "] || "..getUsername()
