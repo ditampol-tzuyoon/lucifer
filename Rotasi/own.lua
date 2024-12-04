@@ -16,15 +16,15 @@ TargetLevel = 999
 DelayRecon = 150000
 DelayBadServer = 150000
 KillGhost = true
+BlackFriday = false
 
 autobuypack = true
-hargapack = 8000                -- Pack Price
-namapack = "building_blocks_machine"       -- Pack Name
-MinItemPack = 1                 -- Bot will dropping the pack when he have X MinItemPack or more
-iditempack = {10394, 6416, 6520, 6538, 6522, 6528, 6540, 6518, 6530, 6524, 6536, 6534, 6532, 6526, 2978, 2580, 8196}
-maxbuy = 100                       -- Bot will try to buying X times if have more gems
-MinGems = 16000              -- Minimal Gems for Buying Pack
-
+hargapack = 20000                -- Pack Price
+namapack = "world_lock_10_pack"       -- Pack Name
+MinItemPack = 10                 -- Bot will dropping the pack when he have X MinItemPack or more
+iditempack = {242}
+maxbuy = 15                       -- Bot will try to buying X times if have more gems
+MinGems = 20000              -- Minimal Gems for Buying Pack
 
 EventLabu = false
 MinGOG = 30
