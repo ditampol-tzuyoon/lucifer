@@ -28,6 +28,7 @@ MinGems = 20000              -- Minimal Gems for Buying Pack
 
 EventLabu = false
 MinGOG = 30
+DurasiWorldPNB = 120
 
 IgnorePack = {}
 for _,pack in pairs(iditempack) do
