@@ -260,7 +260,6 @@ if not ObjectCollectDelay then
 end
 
 function collectSet(erin, jarak)
-    bot.dynamic_delay = true
     bot:setInterval(Action.collect, convertMS(CollectInterval))
     bot.object_collect_delay = ObjectCollectDelay
     bot.collect_range = jarak
