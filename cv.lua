@@ -248,6 +248,10 @@ function trash(id, count)
     end
 end
 
+function convertMS(ms)
+    return ms / 1000
+end
+
 if not CollectInterval then
     CollectInterval = 200
 end
@@ -256,7 +260,7 @@ if not ObjectCollectDelay then
 end
 
 function collectSet(erin, jarak)
-    bot.collect_interval = CollectInterval
+    bot:setInterval(Action.collect, convertMS(CollectInterval))
     bot.object_collect_delay = ObjectCollectDelay
     bot.collect_range = jarak
     bot.auto_collect = erin
