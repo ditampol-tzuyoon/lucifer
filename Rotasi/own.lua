@@ -1,5 +1,5 @@
 TargetGems = 999999999
-ShowBotInfo = true
+ShowBotInfo = false
 
 --[[
 IgnorePack = {}
