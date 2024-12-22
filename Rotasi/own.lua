@@ -1,5 +1,6 @@
 TargetGems = 999999999
 ShowBotInfo = false
+DurasiWorldPNB = 80
 
 --[[
 IgnorePack = {}
