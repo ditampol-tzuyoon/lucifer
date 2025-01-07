@@ -13,6 +13,7 @@ function StatusBot(detail)
         [BotStatus.online] = "online",
         [BotStatus.wrong_password] = "wrong",
         [BotStatus.account_banned] = "acc banned",
+        [BotStatus.account_suspended] = "acc banned",
         [BotStatus.location_banned] = "ip banned",
         [BotStatus.too_many_login] = "too many",
         [BotStatus.version_update] = "update version",
