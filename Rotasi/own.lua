@@ -11,6 +11,7 @@ maxbuy = 5                      -- Bot will try to buying X times if have more g
 MinGems = 20000
 
 if getUsername() == "oline5" then
+    RestSchedule = false
     JadwalOff = {
         "13.45 - 15.30"
     }
