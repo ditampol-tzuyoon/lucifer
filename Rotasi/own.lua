@@ -9,12 +9,12 @@ iditempack = {5402, 10538, 10536, 242}              -- Put all your id item pack
 maxbuy = 5                      -- Bot will try to buying X times if have more gems
 MinGems = 20000
 
-if getUsername() == "oline5" then
-    RestSchedule = false
-    JadwalOff = {
-        "13.45 - 15.30"
-    }
-end
+-- if getUsername() == "oline5" then
+--     RestSchedule = false
+--     JadwalOff = {
+--         "13.45 - 15.30"
+--     }
+-- end
 
 IgnorePack = {}
 for _,pack in pairs(iditempack) do
