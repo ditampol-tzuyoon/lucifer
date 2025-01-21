@@ -3,6 +3,9 @@ DurasiWorldPNB = 80
 SetLevelWorld = 30
 TalkTooMuch = true
 
+BotSurgList = {
+    "AUTOCURE"
+}
 -- hargapack = 20000                -- Pack Price
 -- namapack = "world_lock_10_pack"         -- Pack Name
 -- MinItemPack = 10                 -- Bot will dropping the pack when he have X MinItemPack or more
