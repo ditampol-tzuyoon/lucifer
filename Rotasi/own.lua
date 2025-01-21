@@ -1,6 +1,7 @@
 ShowBotInfo = false
 DurasiWorldPNB = 80
 SetLevelWorld = 30
+TalkTooMuch = true
 
 -- hargapack = 20000                -- Pack Price
 -- namapack = "world_lock_10_pack"         -- Pack Name
