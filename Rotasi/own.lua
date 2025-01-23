@@ -19,6 +19,7 @@ MinGems = 20000
 
 SpecialItem = {5742, 5746, 5748}                -- Put all your id item special in here
 minSpec = 50
+ID_AcuanDrop_Spec = 13
 
 -- if getUsername() == "oline5" then
 --     RestSchedule = false
