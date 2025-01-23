@@ -36,3 +36,9 @@ for _,pack in pairs(iditempack) do
         IgnorePack[pack] = true
     end
 end
+
+for _,pack in pairs(SpecialItem) do
+    if not pengecualian[pack] then
+        pengecualian[pack]=true
+    end
+end
