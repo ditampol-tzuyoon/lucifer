@@ -17,6 +17,9 @@ iditempack = {5402, 10538, 10536, 242, 5764}   -- Put all your id item pack in h
 maxbuy = 5                      -- Bot will try to buying X times if have more gems
 MinGems = 20000
 
+SpecialItem = {5742, 5746, 5748}                -- Put all your id item special in here
+minSpec = 50
+
 -- if getUsername() == "oline5" then
 --     RestSchedule = false
 --     JadwalOff = {
