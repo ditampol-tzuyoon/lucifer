@@ -10,6 +10,13 @@ TalkTooMuch = true
 -- maxbuy = 5                      -- Bot will try to buying X times if have more gems
 -- MinGems = 20000
 
+hargapack = 10000                   -- Pack Price
+namapack = "cny_spray"               -- Pack Name
+MinItemPack = 2                    -- Bot will dropping the pack when he have X MinItemPack or more
+iditempack = {5402, 10538, 10536, 242, 5764}   -- Put all your id item pack in here
+maxbuy = 5                      -- Bot will try to buying X times if have more gems
+MinGems = 20000
+
 -- if getUsername() == "oline5" then
 --     RestSchedule = false
 --     JadwalOff = {
