@@ -3,9 +3,6 @@ DurasiWorldPNB = 80
 SetLevelWorld = 30
 TalkTooMuch = true
 
-BotSurgList = {
-    "AUTOCURE"
-}
 -- hargapack = 20000                -- Pack Price
 -- namapack = "world_lock_10_pack"         -- Pack Name
 -- MinItemPack = 10                 -- Bot will dropping the pack when he have X MinItemPack or more
@@ -19,13 +16,6 @@ BotSurgList = {
 --         "13.45 - 15.30"
 --     }
 -- end
-
-hargapack = 50000
-namapack = "mega_party_pack"
-MinItemPack = 1
-iditempack = {2306, 7672}
-maxbuy = 5
-MinGems = 50000
 
 IgnorePack = {}
 for _,pack in pairs(iditempack) do
