@@ -1,6 +1,7 @@
 ShowBotInfo = false
 DurasiWorldPNB = 80
 SetLevelWorld = 30
+TimeRelogBotMatung = 15
 TalkTooMuch = true
 
 -- hargapack = 20000                -- Pack Price
