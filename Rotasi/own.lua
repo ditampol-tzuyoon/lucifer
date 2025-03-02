@@ -3,6 +3,7 @@ DurasiWorldPNB = 80
 SetLevelWorld = 30
 TimeRelogBotMatung = 15
 TalkTooMuch = true
+setoran = 201
 
 hargapack = 20000                -- Pack Price
 namapack = "world_lock_10_pack"         -- Pack Name
