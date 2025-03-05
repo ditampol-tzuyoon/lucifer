@@ -4,6 +4,7 @@ SetLevelWorld = 30
 TimeRelogBotMatung = 15
 TalkTooMuch = true
 setoran = 201
+MinMaladyDuration = 600
 
 hargapack = 20000                -- Pack Price
 namapack = "world_lock_10_pack"         -- Pack Name
