@@ -6,6 +6,9 @@ TalkTooMuch = true
 setoran = 201
 MinMaladyDuration = 600
 
+DelayRecon = 15000
+DelayBadServer = 15000
+
 hargapack = 20000                -- Pack Price
 namapack = "world_lock_10_pack"         -- Pack Name
 MinItemPack = 10                 -- Bot will dropping the pack when he have X MinItemPack or more
