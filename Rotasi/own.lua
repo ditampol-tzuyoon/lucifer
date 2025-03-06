@@ -5,6 +5,7 @@ TimeRelogBotMatung = 15
 TalkTooMuch = true
 setoran = 201
 MinMaladyDuration = 600
+JedaHW = 1
 
 DelayRecon = 15000
 DelayBadServer = 15000
