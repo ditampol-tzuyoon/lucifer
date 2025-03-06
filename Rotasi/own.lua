@@ -7,8 +7,8 @@ setoran = 201
 MinMaladyDuration = 600
 JedaHW = 1
 
-DelayRecon = 15000
-DelayBadServer = 15000
+DelayRecon = 30000
+DelayBadServer = 30000
 
 -- IgnorePack = {}
 -- for _,pack in pairs(iditempack) do
