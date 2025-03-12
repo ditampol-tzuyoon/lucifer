@@ -1,5 +1,3 @@
 Data_User = {
-    {nama="Oline", maxbot=10, expired=289417249},
-    {nama="monna1", maxbot=15, expired=1741766790},
-    {nama="Monna", maxbot=20, expired=289417275},
+    {nama="monna1", maxbot=24, expired=1744361832},
 }
