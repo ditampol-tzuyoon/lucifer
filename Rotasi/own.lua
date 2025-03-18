@@ -6,6 +6,7 @@ TalkTooMuch = true
 setoran = 201
 MinMaladyDuration = 600
 JedaHW = 1
+PrivatePNB = true
 
 DelayRecon = 30000
 DelayBadServer = 30000
