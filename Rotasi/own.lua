@@ -15,6 +15,13 @@ if getBot().level >= 12 then
   TalkTooMuch = true
 end
 
+RestSchedule = true
+JadwalOff = {
+    "11.30 - 12.30",
+    "17.00 - 19.00",
+    "23.30 - 00.30"
+}
+
 -- IgnorePack = {}
 -- for _,pack in pairs(iditempack) do
 --     if not pengecualian[pack] then
