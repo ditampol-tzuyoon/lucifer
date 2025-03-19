@@ -2,7 +2,7 @@ ShowBotInfo = false
 DurasiWorldPNB = 80
 SetLevelWorld = 30
 TimeRelogBotMatung = 15
-TalkTooMuch = true
+
 setoran = 201
 MinMaladyDuration = 600
 JedaHW = 1
@@ -10,6 +10,10 @@ PrivatePNB = true
 
 DelayRecon = 30000
 DelayBadServer = 30000
+
+if getBot().level >= 12 then
+  TalkTooMuch = true
+end
 
 -- IgnorePack = {}
 -- for _,pack in pairs(iditempack) do
