@@ -24,15 +24,22 @@ JadwalOff = {
     "23.30 - 00.30"
 }
 
--- IgnorePack = {}
--- for _,pack in pairs(iditempack) do
---     if not pengecualian[pack] then
---         pengecualian[pack]=true
---     end
---     if not IgnorePack[pack] then
---         IgnorePack[pack] = true
---     end
--- end
+hargapack = 2000
+namapack = "world_lock"
+MinItemPack = 4
+iditempack = {242}
+maxbuy = 5                      -- Bot will try to buying X times if have more gems
+MinGems = 4000
+
+IgnorePack = {}
+for _,pack in pairs(iditempack) do
+    if not pengecualian[pack] then
+        pengecualian[pack]=true
+    end
+    if not IgnorePack[pack] then
+        IgnorePack[pack] = true
+    end
+end
 
 -- for _,pack in pairs(SpecialItem) do
 --     if not pengecualian[pack] then
