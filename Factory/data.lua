@@ -7,5 +7,6 @@ Data_User = {
     {nama="MasxyLIMIT4", maxbot=20, expired=1744611637, userdc=461383747393028096},
     {nama="vodnew1", maxbot=20, expired=9999999999, userdc=521002987540316184},
     {nama="rodricz1", maxbot=20, expired=1744869952, userdc=768118364681273385},
-    {nama="LUCIEoTpiQvsKgYn", maxbot=30, expired=1745434450, userdc=574260465346019343}
+    {nama="LUCIEoTpiQvsKgYn", maxbot=30, expired=1745434450, userdc=574260465346019343},
+    {nama="noirtake", maxbot=20, expired=1745526032, userdc=232086070697787392}
 }
