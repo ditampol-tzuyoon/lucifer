@@ -18,6 +18,65 @@ IconThumb = {
     "https://raw.githubusercontent.com/ditampol-tzuyoon/Growtopia/main/Erine/13.jpg"
 }
 
+addEvent(Event.variantlist, function(var, netid)
+    if var:get(0):getString() == "OnConsoleMessage" then
+        if var:get(1):getString():find("Failed to enter world for unknown reason.") then
+            GotNuked = true
+            unlistenEvents()
+        elseif var:get(1):getString():find("That world is inaccessible") then
+            GotNuked = true
+            unlistenEvents()
+        end
+    elseif var:get(0):getString() == "OnStoreRequest" then
+        if var:get(1):getString():find(namapack) then
+            CashBack = true
+        end
+        unlistenEvents()
+    elseif var:get(0):getString() == "OnWinterRallyRequest" then
+        if var:get(1):getString():find("claim_button|Claim Rewards") then
+            ClaimWinter = true
+        end
+        unlistenEvents()
+    elseif var:get(0):getString() == "OnDialogRequest" then
+        local variantText = var:get(1):getString()
+        if variantText then
+            if variantText:find("This Auto Surgeon Station can only cure") then
+                TegOD("Malady berhasil disembuhkan!", "Cured!")
+                Cured = true
+                unlistenEvents()
+            elseif variantText:find("end_dialog|autoSurgeonUi") then
+                SurgContinuesOne = true
+                unlistenEvents()
+            elseif variantText:find("end_dialog|autoSurgeonCurePurchaseUi") then
+                SurgContinuesTwo = true
+                unlistenEvents()
+            end
+            unlistenEvents()
+        end
+    elseif var:get(0):getString() == "OnTalkBubble" then
+        local variantText = var:get(2):getString()
+        if variantText then
+            Kocag = variantText:match("You need at least (%d) World Lock to purchase the cure!")
+            if Kocag then
+                TegOD("Harga Curednya "..Kocag.." WL Kocak!")
+                unlistenEvents()
+            end
+        end
+    end
+end)
+
+addEvent(Event.game_message, function(message)
+    if message:find('available|1') then
+        found = true
+        Tegs("Found World [".. WorldPNB .."]")
+        unlistenEvents()
+    elseif message:find('available|0') then
+        found = false
+        Tegs("Not Found World [".. WorldPNB .."]")
+        unlistenEvents()
+    end
+end)
+
 function SendPlant(logger)
     wh = Webhook.new(WebhookPlant)
     wh.content = logger
