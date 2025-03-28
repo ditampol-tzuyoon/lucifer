@@ -145,6 +145,12 @@ function ohdsay(logger, TypeHook, Pings)
         end
         wh:send()
 
+    elseif TypeHook == "NukedHook" then
+        local wh = Webhook.new(NukedHook)
+        wh.username = bot.name
+        wh.content = statzBot .. " | " .. logger .. Ment
+        wh:send()
+
     elseif TypeHook == "WebhookSeed" and (not HideWebhook or ShowSeedInfo) then
         local wh = prepareWebhook(WebhookSeed)
         local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
