@@ -154,12 +154,6 @@ function ohdsay(logger, TypeHook, Kirim, Pings)
             wh.username = bot.name
             wh:send()
 
-        elseif TypeHook == "NukedHook" then
-            local wh = Webhook.new(NukedHook)
-            wh.username = bot.name
-            wh.content = statzBot .. " | " .. logger .. Ment
-            wh:send()
-
         elseif TypeHook == "SeedHook" then
             local wh = prepareWebhook(SeedHook)
             local Deskripsi = "<a:arrowlove:1270653616373628940> START [<t:" .. ExeTime .. ":R>]\n<a:arrowlove:1270653616373628940> UPDATED [<t:" .. os.time() .. ":R>]"
