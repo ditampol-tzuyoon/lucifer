@@ -9,5 +9,6 @@ Data_User = {
     {nama="rodricz1", maxbot=20, expired=1744869952, userdc=768118364681273385},
     {nama="LUCIEoTpiQvsKgYn", maxbot=30, expired=1745434450, userdc=574260465346019343},
     {nama="noirtake", maxbot=104, expired=1745610763, userdc=232086070697787392},
-    {nama="KaiMannn", maxbot=10, expired=9999999999, userdc=883776144103579648}
+    {nama="KaiMannn", maxbot=10, expired=9999999999, userdc=883776144103579648},
+    {nama="LUCI78EnzOCY1rNB", maxbot=50, expired=9999999999, userdc=574260465346019343}
 }
