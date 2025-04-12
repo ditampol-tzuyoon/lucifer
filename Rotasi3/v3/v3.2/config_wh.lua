@@ -50,6 +50,9 @@ addEvent(Event.variantlist, function(var, netid)
             elseif variantText:find("end_dialog|autoSurgeonCurePurchaseUi") then
                 SurgContinuesTwo = true
                 unlistenEvents()
+            elseif variantText:find("add_button|claimrewardsg4g") then
+                ClaimG4G = true
+                unlistenEvents()
             end
             unlistenEvents()
         end
@@ -152,6 +155,12 @@ function ohdsay(logger, TypeHook, Kirim, Pings)
             local wh = Webhook.new(PlantHook)
             wh.content = logger
             wh.username = bot.name
+            wh:send()
+
+        elseif TypeHook == "NukedHook" then
+            local wh = Webhook.new(NukedHook)
+            wh.username = bot.name
+            wh.content = statzBot .. " | " .. logger .. Ment
             wh:send()
 
         elseif TypeHook == "SeedHook" then
