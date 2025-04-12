@@ -27,6 +27,7 @@ function StatusBot(detail)
         [BotStatus.retrieving_token] = "Retrieving Token",
         [BotStatus.logon_fail] = "Login Fail",
         [BotStatus.error_connecting] = "Ercon",
+        [BotStatus.banwave_detected] = "Banwave",
     }
 
     local erS
