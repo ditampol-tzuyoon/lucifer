@@ -15,7 +15,7 @@ if getBot().level >= 12 then
   TalkTooMuch = true
 end
 
-RestSchedule = true
+RestSchedule = false
 JadwalOff = {
     "11.30 - 12.30",
     "15.00 - 15.45",
