@@ -27,13 +27,13 @@ function KirimWebhook(tipe, kirim, msg1, msg2, msg3)
 
         if tipe == "FailedHook" then
             -- Pesan gagal
-            local wh = prepareWebhook(FailedHook)
+            local wh = Webhook.new(FailedHook)
             wh.content = msg1 .. " <@" .. DiscordID .. ">"
             wh:send()
 
         elseif tipe == "PingHook" then
-            -- Pesan gagal
-            local wh = prepareWebhook(PingHook)
+            -- Pesan Ping
+            local wh = Webhook.new(PingHook)
             wh.content = msg1 .. " <@" .. DiscordID .. ">"
             wh:send()
 
