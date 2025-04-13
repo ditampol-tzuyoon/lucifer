@@ -21,7 +21,7 @@ function IniWaktu()
 end
 
 function MengirimConsole(abc)
-    print("["IniWaktu().."] "..bot.name.." | "..abc)
+    print("["..IniWaktu().."] "..bot.name.." | "..abc)
 end
 
 addEvent(Event.variantlist, function(var, netid)
