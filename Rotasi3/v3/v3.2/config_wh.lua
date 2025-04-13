@@ -1,5 +1,5 @@
 Odirrrr = "https://raw.githubusercontent.com/ditampol-tzuyoon/surfer/main/Image%20Animasi.gif"
-LinkStore = "https://discord.gg/ohdear"
+LinkStore = "https://discord.gg/Dbv4TrERck"
 ExeTime = os.time()
 
 IconThumb = {
