@@ -34,7 +34,7 @@ function KirimWebhook(tipe, kirim, msg1, msg2, msg3)
 
         elseif tipe == "PingHook" then
             -- Pesan Ping
-            local MentionOwn = (bot.status == 1) and " <@" .. DiscordID .. ">" or ""
+            local MentionOwn = (bot.status == 1) and "" or " <@" .. DiscordID .. ">"
             local statzBot = (bot.status == 1) and "<a:Onlen:1206807819370758204>" or "<a:Oflen:1206807838996045844>"
             
             local wh = Webhook.new(PingHook)
