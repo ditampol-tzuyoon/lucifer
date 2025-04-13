@@ -28,13 +28,18 @@ function KirimWebhook(tipe, kirim, msg1, msg2, msg3)
         if tipe == "FailedHook" then
             -- Pesan gagal
             local wh = Webhook.new(FailedHook)
-            wh.content = msg1 .. " <@" .. DiscordID .. ">"
+            wh.username = bot.name
+            wh.content = msg1 .. " | <@" .. DiscordID .. ">"
             wh:send()
 
         elseif tipe == "PingHook" then
             -- Pesan Ping
+            local MentionOwn = (bot.status == 1) and " <@" .. DiscordID .. ">" or ""
+            local statzBot = (bot.status == 1) and "<a:Onlen:1206807819370758204>" or "<a:Oflen:1206807838996045844>"
+            
             local wh = Webhook.new(PingHook)
-            wh.content = msg1 .. " <@" .. DiscordID .. ">"
+            wh.username = bot.name
+            wh.content = statzBot .. " | " .. msg1 .. MentionOwn
             wh:send()
 
         elseif tipe == "BotHook" then
