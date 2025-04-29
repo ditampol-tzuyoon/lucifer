@@ -26,10 +26,10 @@ JadwalOff = {
 
 hargapack = 2000
 namapack = "world_lock"
-MinItemPack = 4
+MinItemPack = 5
 iditempack = {242}
-maxbuy = 5                      -- Bot will try to buying X times if have more gems
-MinGems = 4000
+maxbuy = 10                      -- Bot will try to buying X times if have more gems
+MinGems = 10000
 
 IgnorePack = {}
 for _,pack in pairs(iditempack) do
