@@ -290,15 +290,24 @@ function getTile(x, y)
     local world = bot:getWorld()
     local tile = world:getTile(x, y)
 
+    if not tile then
+        return {
+            fg = 9999,
+            bg = 9999,
+            flags = 0,
+            ready = false,
+            access = 0,
+        }
+    end
+
     return {
-        fg = tile.fg,
-        bg = tile.bg,
-        flags = tile.flags,
-        ready = tile:canHarvest(),
-        access = world:hasAccess(x, y),
+        fg = tile.fg or 0,
+        bg = tile.bg or 0,
+        flags = tile.flags or 0,
+        ready = tile.canHarvest and tile:canHarvest() or false,
+        access = world.hasAccess and world:hasAccess(x, y) or 0,
     }
 end
-
 
 function getInventory()
     local tas = {}
