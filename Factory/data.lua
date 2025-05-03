@@ -1,3 +1,5 @@
+-- 2592000
+
 Data_User = {
     {nama="monna1", maxbot=24, expired=1744361832, userdc=422670528483033088},
     {nama="monna2", maxbot=24, expired=1744361832, userdc=422670528483033088},
@@ -11,7 +13,7 @@ Data_User = {
     {nama="noirtake", maxbot=104, expired=1745610763, userdc=232086070697787392},
     {nama="KaiMannn", maxbot=10, expired=9999999999, userdc=883776144103579648},
     {nama="LUCI78EnzOCY1rNB", maxbot=50, expired=1746321484, userdc=574260465346019343},
-    {nama="nielsen2", maxbot=20, expired=1746621609, userdc=1282700188049473639},
+    {nama="nielsen2", maxbot=20, expired=1748881195, userdc=1282700188049473639},
     {nama="kateori", maxbot=20, expired=1747026938, userdc=624882833797808138},
     {nama="nielsen1", maxbot=20, expired=1747026938, userdc=1282700188049473639},
     {nama="nielsen3", maxbot=20, expired=1747620222, userdc=1282700188049473639}
