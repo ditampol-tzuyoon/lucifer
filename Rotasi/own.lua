@@ -3,7 +3,7 @@ DurasiWorldPNB = 80
 SetLevelWorld = 30
 TimeRelogBotMatung = 15
 
-setoran = 201
+setoran = 75
 MinMaladyDuration = 600
 JedaHW = 1
 PrivatePNB = true
