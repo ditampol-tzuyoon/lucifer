@@ -19,5 +19,6 @@ Data_User = {
     {nama="nielsen3", maxbot=20, expired=1747620222, userdc=1282700188049473639},
     {nama="sadutuser", maxbot=100, expired=9999999999, userdc=763055169072005220},
     {nama="rodricx", maxbot=20, expired=1749658952, userdc=768118364681273385},
-    {nama="pasti", maxbot=20, expired=1750157547, userdc=1197199946676445315}
+    {nama="pasti", maxbot=20, expired=1750157547, userdc=1197199946676445315},
+    {nama="chaikang1017", maxbot=10, expired=9999999999, userdc=1017010677086437386}
 }
