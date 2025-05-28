@@ -1,1 +1,1 @@
-Server_Ohdear = "http://47.252.25.188"
+Server_Ohdear = "http://47.251.174.22"
