@@ -24,5 +24,6 @@ Data_User = {
     {nama="u7sb4je", maxbot=10, expired=9999999999, userdc=653055853481558070},
     {nama="levi", maxbot=20, expired=1750606069, userdc=363533486524727298},
     {nama="cinekaput", maxbot=20, expired=1750606069, userdc=757396264982675477},
-    {nama="Faizani", maxbot=30, expired=1750606069, userdc=1060181132429242491}
+    {nama="Faizani", maxbot=30, expired=1750606069, userdc=1060181132429242491},
+    {nama="PESOIL", maxbot=10, expired=9999999999, userdc=1231545548524224595}
 }
