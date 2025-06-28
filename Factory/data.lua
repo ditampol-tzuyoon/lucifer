@@ -28,5 +28,6 @@ Data_User = {
     {nama="PESOIL1", maxbot=10, expired=9999999999, userdc=1231545548524224595},
     {nama="sneakyjoji", maxbot=20, expired=9999999999, userdc=861895832563613696},
     {nama="ArknN", maxbot=50, expired=9999999999, userdc=745214900581957702},
-    {nama="kucingmain2", maxbot=20, expired=9999999999, userdc=1125568306208837654}
+    {nama="kucingmain2", maxbot=20, expired=9999999999, userdc=1125568306208837654},
+    {nama="YujinAkari", maxbot=50, expired=1753666015, userdc=574260465346019343}
 }
