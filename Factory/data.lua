@@ -29,7 +29,7 @@ Data_User = {
     {nama="sneakyjoji", maxbot=20, expired=9999999999, userdc=861895832563613696},
     {nama="ArknN", maxbot=50, expired=9999999999, userdc=745214900581957702},
     {nama="kucingmain2", maxbot=20, expired=9999999999, userdc=1125568306208837654},
-    {nama="YujinAkari", maxbot=50, expired=1753666015, userdc=574260465346019343},
+    {nama="YujinAkari", maxbot=110, expired=9999999999, userdc=574260465346019343},
     {nama="euclairisme", maxbot=20, expired=9999999999, userdc=216117501384327168},
     {nama="arkan5342", maxbot=20, expired=9999999999, userdc=1043480709173612556}
 }
